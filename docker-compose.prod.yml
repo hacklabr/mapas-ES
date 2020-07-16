@@ -2,7 +2,7 @@ version: '3'
 services:
   web:
     image: hacklab/mapasculturais-nginx:latest
-    restart: always
+    restart: unless-stopped
     volumes:
      - ./docker-data/public-files:/var/www/html/files
      - ./docker-data/assets:/var/www/html/assets
@@ -19,15 +19,14 @@ services:
     build:
       context: ./
       dockerfile: compose/production/Dockerfile
-    restart: always
+    restart: unless-stopped
     ports:
       - "9000:9000"
     volumes:
       - ./docker-data/assets:/var/www/html/assets
       - ./docker-data/public-files:/var/www/html/files
       - ./docker-data/private-files:/var/www/private-files
-    links:
-      - db
+
     environment:
       - POSTGRES_PASSWORD=mapas
       - POSTGRES_USER=mapas
@@ -44,8 +43,8 @@ services:
       - db
       
   db:
-    restart: always
     image: mdillon/postgis:11
+    restart: unless-stopped
     environment:
       - POSTGRES_PASSWORD=mapas
       - POSTGRES_USER=mapas
