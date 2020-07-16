@@ -1,0 +1,3 @@
+[submodule "plugins/AldirBlanc"]
+	path = plugins/AldirBlanc
+	url = git@github.com:mapasculturais/plugin-AldirBlanc.git
