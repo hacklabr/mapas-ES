@@ -30,7 +30,7 @@ services:
     tty: true
 
   db:
-    image: mdillon/postgis:10
+    image: mdillon/postgis:11
     environment:
       - POSTGRES_PASSWORD=mapas
       - POSTGRES_USER=mapas
