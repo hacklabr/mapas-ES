@@ -1,5 +1,7 @@
-# Mapas Culturais Base Project
-Este é um projeto base para desenvolvimento de temas e plugins.
+# Solução Aldir Blanc
+O intuito deste repositório é facilitar o deployment da plataforma [Mapas Culturais](https://github.com/mapasculturais/mapasculturais) como solução para os cadastros da Lei Aldir Blanc, assim como servir de ambiente de desenvolvimento do [Plugin AldirBlanc](https://github.com/mapasculturais/plugin-AldirBlanc), submódulo deste repositório.
+
+Este repositório já utiliza como autenticador o plugin MultipleLocalAuth
 
 ## Estrutura de arquivos
 - **compose**
@@ -13,9 +15,9 @@ Este é um projeto base para desenvolvimento de temas e plugins.
     - **psql.sh** - entra no banco de dados da aplicação
     - **docker-compose.local.yml** - arquivo de definição do docker-compose utilizado pelos scripts acima
 - **plugins** - pasta com os plugins desenvolvidos exclusivamente para o projeto
-    - **SamplePlugin** - esqueleto de plugin para demostração e para servir de base para o desenvolvimento de outros plugins
+    - **AldirBlanc** - plugin que implementa os formulários de cadastro do inciso I e II da Lei Aldir Blanc
 - **themes** - pasta com os temas desenvolvidos exclusivaente para o projeto
-    - **SampleTheme** - esqueleto de tema filho de Subsite para demostração e para servir de base para o desenvolvimento de outros temas
+    - **SampleTheme** - esqueleto de tema filho do BaseV1 para demostração e para servir de base para o desenvolvimento de outros temas
 
 ## Guia rápido para início de novo projeto
 Antes de tudo certifique-se de ter os pacotes _git_, _docker_ e _docker-compose_ instalados e estar utilizando sistema operacional Linux ou MacOS. 
@@ -27,7 +29,7 @@ Crie um repositório vazio no github ou gitlab (usarei de exemplo o nome _https:
 
 Clone o repositório do projeto base no seu computador
 ```
-$ git clone https://github.com/mapasculturais/mapasculturais-base-project.git meu-mapas
+$ git clone https://github.com/mapasculturais/mapasculturais-aldirblanc.git meu-mapas --recursive
 $ cd meu-mapas
 ```
 
@@ -57,7 +59,7 @@ Para subir o ambiente de desenvolvimento basta entrar na pasta `dev-scripts` e r
 meu-mapas/dev-scripts/$ sudo ./start-dev.php
 ```
 
-acesse no seu navegador http://localhost/
+acesse no seu navegador http://localhost:8080/
 
 #### psysh
 Este ambiente roda com o built-in web server do PHP, o que possibilita que seja utilizado o [PsySH](https://psysh.org/]), um console interativo para debug e desenvolvimento. 
@@ -67,7 +69,7 @@ no lugar desejado, adicione a linha `eval(\psy\sh());` e você obterá um consol
 #### Parando o ambiente de desenvolvimento
 Para parar o ambiente de desenvolvimento usar as teclas `Ctrl + C`
 
-#### Usuário super administrador da rede
+## Usuário super administrador da rede
 O banco de dados inicial inclui um usuário de role `saasSuperAdmin` de **id** `1` e **email** `Admin@local`.
 Este usuário possui permissão de criar, modificar e deletar qualquer objeto do banco.
 
@@ -91,19 +93,28 @@ meu-mapas/themes$ cp -a SamplesTheme NovoTema
 namespace NovoTema;
 ```
 
-## Criando um novo plugin
-Usaremos para exemplo o seguinte nome para o plugin: `MeuPlugin`
 
-1. copie a pasta `plugins/SamplePlugin` para `plugins/MeuPlugin`;
+## Deployment para produção
+@todo
+
+### Configurações
+@todo
+
+### Inicializando os serviços
+@todo
 ```
-meu-mapas/plugins$ cp -a SamplesTheme MeuPlugin
+meu-mapas$ sudo docker-compose -f docker-compose.prod.yml up
 ```
-2. edite o arquivo `dev-scripts/docker-compose.yml` adicionando uma linha na seção _volumes_ para o tema:
+
+### Atualizando o Mapas Culturais
+Modifique a versão do Mapas Culturais no início do arquivo `compose/production/Dockerfile` e execute os comandos abaixo:
 ```
-    - ../plugins/MeuPlugin:/var/www/html/protected/application/plugins/MeuPlugin
+meu-mapas$ sudo docker-compose -f docker-compose.prod.yml build
+meu-mapas$ sudo docker-compose -f docker-compose.prod.yml restart mapasculturais
 ```
-3. edite o arquivo `plugins/MeuPlugin/Plugin.php` e substitua o namespace (linha 2) por `MeuPlugin`:
-```+PHP
-<?php
-namespace MeuPlugin;
-```
+
+### TLS / HTTPS
+@todo
+
+#### Let`s Encrypt
+@todo
