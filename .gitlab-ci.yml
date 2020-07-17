@@ -13,6 +13,9 @@ variables:
   KUBECONFIG: /etc/k8s-config
 
 build to homolog:
+  variables:
+    GIT_SUBMODULE_STRATEGY: normal
+
   stage: build
   script:
     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
@@ -39,6 +42,8 @@ deploy to homolog:
 
 
 # build to production:
+#   variables:
+#     GIT_SUBMODULE_STRATEGY: normal
 #   stage: build
 #   script:
 #     - docker login -u "gitlab-ci-token" -p "$CI_JOB_TOKEN" $CI_REGISTRY
