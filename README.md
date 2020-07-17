@@ -1,7 +1,7 @@
 # Solução Aldir Blanc
 O intuito deste repositório é facilitar o deployment da plataforma [Mapas Culturais](https://github.com/mapasculturais/mapasculturais) como solução para os cadastros da Lei Aldir Blanc, assim como servir de ambiente de desenvolvimento do [Plugin AldirBlanc](https://github.com/mapasculturais/plugin-AldirBlanc), submódulo deste repositório.
 
-Este repositório já utiliza como autenticador o plugin MultipleLocalAuth
+Este repositório já utiliza como autenticador o plugin MultipleLocalAuth.
 
 ## Estrutura de arquivos
 - **compose**
