@@ -7,6 +7,6 @@ return [
         'EvaluationMethodDocumentary' => ['namespace' => 'EvaluationMethodDocumentary'],
         
         'MultipleLocalAuth' => [ 'namespace' => 'MultipleLocalAuth' ],
-        'SamplePlugin' => ['namespace' => 'SamplePlugin'],
+        'AldirBlanc' => ['namespace' => 'AldirBlanc'],
     ]
 ];
