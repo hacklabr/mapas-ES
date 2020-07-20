@@ -29,6 +29,7 @@ services:
     environment:
       - PENDING_PCACHE_RECREATION_INTERVAL=10
       - APP_MODE=development
+      - CACHE_ASSETS_URL=false
 
     depends_on:
       - db
