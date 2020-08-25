@@ -24,7 +24,7 @@ return [
            ),
 
            'LinkedIn' => array(
-                'visible' => env('AUTH_LINKEDIN_VISIBLE', null),
+                'visible' => env('AUTH_LINKEDIN_VISIBLE', false),
                 'api_key' => env('AUTH_LINKEDIN_API_KEY', null),
                 'secret_key' => env('AUTH_LINKEDIN_SECRET_KEY', null),
                 'redirect_uri' => $_APP_BASE_URL . 'autenticacao/linkedin/oauth2callback',
