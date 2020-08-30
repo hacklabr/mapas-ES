@@ -30,7 +30,7 @@ Crie um repositório vazio no github ou gitlab (usarei de exemplo o nome _https:
 
 Clone o repositório do projeto base no seu computador
 ```
-$ git clone https://github.com/mapasculturais/mapasculturais-aldirblanc.git meu-mapas --recursive
+$ git clone https://github.com/mapasculturais/mapasculturais-aldirblanc.git meu-mapas --recursive 
 $ cd meu-mapas
 ```
 
