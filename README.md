@@ -3,6 +3,7 @@ O intuito deste repositório é facilitar o deployment da plataforma [Mapas Cult
 
 Este repositório já utiliza como autenticador o plugin MultipleLocalAuth.
 
+
 ## Estrutura de arquivos
 - **compose**
     - **common** - arquivos comuns dos ambientes de desenvolvimento e produção
@@ -29,7 +30,7 @@ Crie um repositório vazio no github ou gitlab (usarei de exemplo o nome _https:
 
 Clone o repositório do projeto base no seu computador
 ```
-$ git clone https://github.com/mapasculturais/mapasculturais-aldirblanc.git meu-mapas --recursive
+$ git clone https://github.com/mapasculturais/mapasculturais-aldirblanc.git meu-mapas --recursive 
 $ cd meu-mapas
 ```
 
