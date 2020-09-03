@@ -7,7 +7,10 @@ return [
 
     'themes.active' => env('ACTIVE_THEME', 'MapasCulturais\Themes\BaseV1'),
 
-    'app.lcode' => env('APP_LCODE', 'pt_BR,es_ES'),
+    'app.lcode' => env('APP_LCODE', 'pt_BR'),
+
+    // colocar sigla do estado, ou código do ibge?
+    'registration.prefix' => env('REGISTRATION_PREFIX', 'on-'),
 
     'namespaces' => array(
         'MapasCulturais\Themes' => THEMES_PATH,
