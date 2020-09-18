@@ -33,7 +33,7 @@ deploy to homolog:
   image: hacklab/kubectl:latest
   script:
     - echo ${kube_config} | base64 -d > ${KUBECONFIG}
-    - kubectl -n mapasculturais-aldirblanc-dev --record deployment.apps/mapasculturais set image deployment.v1.apps/mapasculturais mapasculturais=$HOMOLOG_IMAGE
+    - kubectl -n "$CI_PROJECT_NAME"-dev --record deployment.apps/mapas set image deployment.v1.apps/mapas mapas=$HOMOLOG_IMAGE
   only:
     - /master/
   environment: homolog
@@ -63,7 +63,7 @@ deploy to homolog:
 #   image: hacklab/kubectl:latest
 #   script:
 #     - echo ${kube_config} | base64 -d > ${KUBECONFIG}
-#     - kubectl -n mapasculturais-aldirblanc-prod --record deployment.apps/mapasculturais set image deployment.apps/mapasculturais mapasculturais=$RELEASE_IMAGE
+#     - kubectl -n "$CI_PROJECT_NAME"-prod --record deployment.apps/mapas set image deployment.apps/mapas mapas=$RELEASE_IMAGE
 #   only:
 #     - tags
 #   environment: production
