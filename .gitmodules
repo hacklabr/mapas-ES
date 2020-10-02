@@ -1,3 +1,6 @@
 [submodule "plugins/AldirBlanc"]
 	path = plugins/AldirBlanc
 	url = https://github.com/mapasculturais/plugin-AldirBlanc.git
+[submodule "plugins/MultipleLocalAuth"]
+	path = plugins/MultipleLocalAuth
+	url = https://github.com/mapasculturais/plugin-MultipleLocalAuth
