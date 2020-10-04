@@ -30,6 +30,37 @@ return [
 
             ],
         ],
+        'AldirBlancRedirects' => [
+            'namespace' => 'AldirBlancRedirects',
+            'config' => [
+                'condition' => function() {
+                    $app = MapasCulturais\App::i();
+
+                    if($app->user->is('guest')){
+                        return false;
+                    }
+
+                    if($app->user->is('admin')){
+                        return true;
+                    }
+
+                    $plugin = $app->plugins['AldirBlanc'];
+
+                    // só pode acessar as demais urls quem tiver controle sobre o agente da SECULT
+                    $opportunities_ids = array_values($plugin->config['inciso2_opportunity_ids']);
+                    $opportunities_ids[] = $plugin->config['inciso1_opportunity_id'];
+
+                    $opportunities = $app->repo('Opportunity')->findBy(['id' => $opportunities_ids]);
+                    
+                    foreach($opportunities as $opportunity) { 
+                        if($opportunity->canUser('@control') || $opportunity->canUser('viewEvaluations') || $opportunity->canUser('evaluateRegistrations')) {
+                            return true;
+                        }
+                    }
+                    return false;
+                }
+            ]
+        ],
 
     ]
 ];
