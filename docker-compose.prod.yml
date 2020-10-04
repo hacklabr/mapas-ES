@@ -69,8 +69,6 @@ services:
       - AUTH_SUPPORT_EMAIL=
       - AUTH_SUPPORT_CHAT=
 
-      - LINK_TERMOS=
-
     depends_on:
       - db
       
