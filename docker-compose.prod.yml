@@ -33,6 +33,8 @@ services:
 
 
   mapasculturais:
+    env_file:
+      - mapasculturais.prod.env
     build:
       context: ./
       dockerfile: compose/production/Dockerfile
