@@ -9,6 +9,11 @@ $_APP_BASE_URL = $prot_part . $host_part;
 return [
     'auth.provider' => '\MultipleLocalAuth\Provider',
     'auth.config' => array(
+        
+        'urlSupportEmail' => 'suportemapacultural@secult.es.gov.br',
+        'urlImageToUseInEmails' => 'https://mapa.cultura.es.gov.br/assets/aldirblanc/img/aldir-blanc.png',
+
+
         'salt' => env('AUTH_SALT', null),
         'timeout' => '24 hours',
 
