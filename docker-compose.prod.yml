@@ -57,7 +57,7 @@ services:
       
       - APP_MODE=production
       - PENDING_PCACHE_RECREATION_INTERVAL=1
-      - REGISTRATION_PREFIX=es
+      - REGISTRATION_PREFIX=es-
 
       - AUTH_EMAIL_IMAGE=
 
