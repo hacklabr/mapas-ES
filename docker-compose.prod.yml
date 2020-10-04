@@ -70,7 +70,6 @@ services:
       - AUTH_SUPPORT_CHAT=
 
       - LINK_TERMOS=
-      - AB_INCISO2_ENABLE=false
 
     depends_on:
       - db
