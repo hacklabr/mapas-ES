@@ -1,6 +1,4 @@
 #!/bin/bash
-docker pull mapasculturais/mapasculturais:develop
-
 git pull
 
 git submodule update
