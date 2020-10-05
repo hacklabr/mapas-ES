@@ -10,6 +10,7 @@ services:
      - ./docker-data/assets:/var/www/html/assets
 
 #     - ./em-manutencao:/var/www/html/em-manutencao
+     - ./em-breve:/var/www/html/em-breve
 
      - ./docker-data/nginx:/etc/nginx/conf.d
      - ./docker-data/certbot/conf:/etc/letsencrypt
@@ -47,6 +48,7 @@ services:
       - ./docker-data/private-files:/var/www/private-files
 
  #     - ./em-manutencao:/var/www/html/em-manutencao
+     - ./em-breve:/var/www/html/em-breve
 
     environment:
       - POSTGRES_PASSWORD=mapas
