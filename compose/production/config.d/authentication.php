@@ -10,7 +10,7 @@ return [
     'auth.provider' => '\MultipleLocalAuth\Provider',
     'auth.config' => array(
         
-        'urlSupportEmail' => 'suportemapacultural@secult.es.gov.br',
+        'urlSupportEmail' => 'mailto:suportemapacultural@secult.es.gov.br',
         'urlImageToUseInEmails' => 'https://mapa.cultura.es.gov.br/assets/aldirblanc/img/aldir-blanc.png',
 
 
