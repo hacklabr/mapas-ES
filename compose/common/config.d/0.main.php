@@ -2,7 +2,7 @@
 use MapasCulturais\i;
 
 return [
-    'app.siteName' => env('SITE_NAME', 'Lei Aldir Blanc - DEV'),
+    'app.siteName' => env('SITE_NAME', 'Mapa Cultural ES'),
     'app.siteDescription' => env('SITE_DESCRIPTION', 'Solução para os cadastros da Lei Aldir Blanc'),
 
     'themes.active' => env('ACTIVE_THEME', 'MapasCulturais\Themes\BaseV1'),
