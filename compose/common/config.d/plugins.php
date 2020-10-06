@@ -10,8 +10,9 @@ return [
         'AldirBlanc' => [
             'namespace' => 'AldirBlanc',
             'config' => [
-                'logotipo_instituicao' => '/assets/aldirblanc/img/governo-cultura.png',
+                'logotipo_instituicao' => 'https://mapa.cultura.es.gov.br/assets/aldirblanc/img/governo-cultura.png',
                 'logotipo_central' => '/assets/aldirblanc/img/aldir-blanc.png',
+                'inciso1_limite' => 10,
 
                 'inciso1_enabled' => true,
                 'inciso2_enabled' => false,
