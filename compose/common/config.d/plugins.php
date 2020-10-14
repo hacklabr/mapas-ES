@@ -27,7 +27,7 @@ return [
                 'titulo_home'=> env('AB_TITULO_HOME','Lei Aldir Blanc'),
                 'link_suporte' => env('AB_LINK_SUPORTE','mailto:suportemapacultural@secult.es.gov.br'),
                 'privacidade_termos_condicoes' => env('AB_PRIVACIDADE_TERMOS',null),
-                'prefix_project' =>  env('AB_GERADOR_PROJECT_PREFIX', 'Lei Aldir Blanc - ') 
+                'prefix_project' =>  'Lei Aldir Blanc | ' 
 
             ],
         ],
