@@ -14,7 +14,7 @@ return [
                 'logotipo_central' => '/assets/aldirblanc/img/aldir-blanc.png',
 
                 'inciso1_enabled' => true,
-                'inciso2_enabled' => true,
+                'inciso2_enabled' => false,
                 'inciso3_enabled' => false,
 
                 'project_id' => 1,
