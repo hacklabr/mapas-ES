@@ -15,8 +15,8 @@ return [
                 'inciso1_enabled' => env('AB_INCISO1_ENABLE',true),
                 'inciso2_enabled' => env('AB_INCISO2_ENABLE',false),
                 'inciso3_enabled' => env('AB_INCISO3_ENABLE',false),
-                
 
+                
                 'project_id' => 1,
                 'inciso1' => (array) json_decode(env('AB_INCISO1', '[]')),
                 'inciso1_opportunity_id' => 1,
