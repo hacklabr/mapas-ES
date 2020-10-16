@@ -7,3 +7,6 @@
 [submodule "plugins/AldirBlancRedirects"]
 	path = plugins/AldirBlancRedirects
 	url = https://github.com/mapasculturais/plugin-AldirBlancRedirects.git
+[submodule "plugins/AldirBlancDataprev"]
+	path = plugins/AldirBlancDataprev
+	url = https://github.com/mapasculturais/plugin-AldirBlancDataprev
