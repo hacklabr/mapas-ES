@@ -72,6 +72,12 @@ return [
                 ],
             ],
         ],
+        'AldirBlancDataprev' => [
+            'namespace' => 'AldirBlancDataprev',
+            'config' => [
+                'consolidacao_requer_validacoes' => ['financeiro']
+            ],
+        ],
         'AldirBlancRedirects' => [
             'namespace' => 'AldirBlancRedirects',
             'config' => [
