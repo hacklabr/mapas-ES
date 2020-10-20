@@ -13,7 +13,7 @@ return [
                 'logotipo_instituicao' => '/assets/aldirblanc/img/governo-cultura.png',
                 'logotipo_central' => '/assets/aldirblanc/img/aldir-blanc.png',
                 'inciso1_enabled' => env('AB_INCISO1_ENABLE',true),
-                'inciso2_enabled' => env('AB_INCISO2_ENABLE',false),
+                'inciso2_enabled' => env('AB_INCISO2_ENABLE',true),
                 'inciso3_enabled' => env('AB_INCISO3_ENABLE',false),
 
                 'project_id' => 1,
