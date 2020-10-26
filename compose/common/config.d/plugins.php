@@ -15,7 +15,7 @@ return [
                 'inciso1_enabled' => env('AB_INCISO1_ENABLE',true),
                 'inciso2_enabled' => env('AB_INCISO2_ENABLE',true),
                 'inciso3_enabled' => env('AB_INCISO3_ENABLE',false),
-
+                'mediados_owner' => 1,
                 'project_id' => 1,
                 'inciso1' => (array) json_decode(env('AB_INCISO1', '[]')),
                 'inciso1_opportunity_id' => 1,
@@ -34,7 +34,8 @@ return [
                 'oportunidade_mediadores' => [
                     'med@inc1.com.br'=> [1],
                     'muitas@cidades.com.br' => [41,40,38],
-                    'media@jaguare.com.br' => [42]
+                    'media@jaguare.com.br' => [42],
+                    'agenciaassuncaocachoeiro@gmail.com' =>[42]
                 ],
                 'prefix_project' =>  'Lei Aldir Blanc | ' ,
                 'inciso2' =>
