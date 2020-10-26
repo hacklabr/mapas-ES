@@ -31,7 +31,11 @@ return [
                     "seal"=>1,
                     "shortDescription"=>"Benef\u00edcio para auxiliar espa\u00e7os e organiza\u00e7\u00f5es culturais a manter suas atividades durante o isolamento social ocasionado pela pandemia covid-19 - orientada pela Lei Aldir Blanc (Lei n\u00ba 14.017)"
                 ],
-
+                'oportunidade_mediadores' => [
+                    'med@inc1.com.br'=> [1],
+                    'muitas@cidades.com.br' => [41,40,38],
+                    'media@jaguare.com.br' => [42]
+                ],
                 'prefix_project' =>  'Lei Aldir Blanc | ' ,
                 'inciso2' =>
                 [
