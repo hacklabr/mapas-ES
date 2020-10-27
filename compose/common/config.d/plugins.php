@@ -27,7 +27,6 @@ return [
                 'link_suporte' => env('AB_LINK_SUPORTE','mailto:suportemapacultural@secult.es.gov.br'),
                 'privacidade_termos_condicoes' => env('AB_PRIVACIDADE_TERMOS',null),
                 'inciso2_default' => [
-                    "avatar"=>"avatar-aldirblanc.jpg",
                     "seal"=>1,
                     "shortDescription"=>"Benefício para auxiliar espaços e organizações culturais a manter suas atividades durante o isolamento social ocasionado pela pandemia covid-19 - orientada pela Lei Aldir Blanc (Lei nº 14.017)."
                 ],
