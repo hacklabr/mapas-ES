@@ -29,7 +29,7 @@ return [
                 'inciso2_default' => [
                     "avatar"=>"avatar-aldirblanc.jpg",
                     "seal"=>1,
-                    "shortDescription"=>"Benef\u00edcio para auxiliar espa\u00e7os e organiza\u00e7\u00f5es culturais a manter suas atividades durante o isolamento social ocasionado pela pandemia covid-19 - orientada pela Lei Aldir Blanc (Lei n\u00ba 14.017)"
+                    "shortDescription"=>"Benefício para auxiliar espaços e organizações culturais a manter suas atividades durante o isolamento social ocasionado pela pandemia covid-19 - orientada pela Lei Aldir Blanc (Lei nº 14.017)."
                 ],
                 'oportunidade_mediadores' => [
                     'med@inc1.com.br'=> [1],
@@ -80,6 +80,12 @@ return [
                     (object) ["owner" =>1505, "city" => "Itaguaçu"],
                     (object) ["owner" =>1506, "city" => "Itarana"],
                     (object) ["owner" =>1507, "city" => "Jaguaré"],
+                    (object) ["owner" =>2480, "city" => "Iúna"],
+                    (object) ["owner" =>2485, "city" => "Conceição da Barra"],
+                    (object) ["owner" =>2486, "city" => "Jerônimo Monteiro"],
+                    (object) ["owner" =>2532, "city" => "Divino São Lourenço"],
+                    (object) ["owner" =>2529, "city" => "Baixo Guandu"],
+                    (object) ["owner" =>2479, "city" => "Brejetuba"],
                 ],
             ],
         ],
