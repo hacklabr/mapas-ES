@@ -36,6 +36,10 @@ return [
                     'media@jaguare.com.br' => [42],
                     'agenciaassuncaocachoeiro@gmail.com' =>[42]
                 ],
+                'zammad_enable' => env('AB_ZAMMAD_ENABLE', true),
+                'zammad_src_form' => env('AB_ZAMMAD_SRC_FORM', 'https://suporte.es.mapasculturais.com.br/assets/form/form.js'),
+                'zammad_src_chat' => env('AB_ZAMMAD_SRC_CHAT', 'https://suporte.es.mapasculturais.com.br/assets/chat/chat.min.js'),
+                
                 'prefix_project' =>  'Lei Aldir Blanc | ' ,
                 'inciso2' =>
                 [

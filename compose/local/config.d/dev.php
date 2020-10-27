@@ -10,7 +10,7 @@ return [
 
     // app.log.hook aceita regex para filtrar quais hooks são exibidos no output, 
     // ex: "panel", "^template", "template\(site\.index\.*\):before"
-    'app.log.hook'          => false, 
+    'app.log.hook'          => 'footer', 
     // 'app.log.query'         => true,
     // 'app.log.requestData'   => true,
     // 'app.log.translations'  => true,
@@ -30,8 +30,8 @@ return [
 
 
     // AUTH -------------------
-    // 'auth.provider' => 'Fake', 
-    'auth.provider' => '\MultipleLocalAuth\Provider',
+    'auth.provider' => 'Fake', 
+    #'auth.provider' => '\MultipleLocalAuth\Provider',
     'auth.config' => array(
         'salt' => env('AUTH_SALT', null),
         'timeout' => '24 hours',
