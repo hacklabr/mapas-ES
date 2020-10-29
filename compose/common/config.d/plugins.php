@@ -39,7 +39,7 @@ return [
                 'zammad_enable' => env('AB_ZAMMAD_ENABLE', true),
                 'zammad_src_form' => env('AB_ZAMMAD_SRC_FORM', 'https://suporte.es.mapasculturais.com.br/assets/form/form.js'),
                 'zammad_src_chat' => env('AB_ZAMMAD_SRC_CHAT', 'https://suporte.es.mapasculturais.com.br/assets/chat/chat.min.js'),
-                'zammad_background_color' => env('AB_ZAMMAD_SRC_CHAT', '#31aac9'),
+                'zammad_background_color' => env('AB_ZAMMAD_SRC_CHAT', '#6080FF'),
 
                 'prefix_project' =>  'Lei Aldir Blanc | ' ,
                 'inciso2' =>
