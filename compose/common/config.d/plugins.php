@@ -40,6 +40,17 @@ return [
                 'zammad_src_form' => env('AB_ZAMMAD_SRC_FORM', 'https://suporte.es.mapasculturais.com.br/assets/form/form.js'),
                 'zammad_src_chat' => env('AB_ZAMMAD_SRC_CHAT', 'https://suporte.es.mapasculturais.com.br/assets/chat/chat.min.js'),
                 'zammad_background_color' => env('AB_ZAMMAD_SRC_CHAT', '#6080FF'),
+                // define os ids para dataprev e avaliadores genericos
+                'avaliadores_dataprev_user_id' => (array) json_decode(env('AB_AVALIADORES_DATAPREV_USER_ID', '[1894]')),
+                'avaliadores_genericos_user_id' => (array) json_decode(env('AB_AVALIADORES_GENERICOS_USER_ID', '[2153]')),
+                
+                // define a exibição do resultado das avaliações para cada status (1, 2, 3, 8, 10)
+                'exibir_resultado_padrao' => (array) json_decode(env('AB_EXIBIR_RESULTADO_PADRAO', '["1", "2", "3", "8", "10"]')),
+                'exibir_resultado_dataprev' => (array) json_decode(env('AB_EXIBIR_RESULTADO_DATAPREV', '[]')),
+                'exibir_resultado_generico' => (array) json_decode(env('AB_EXIBIR_RESULTADO_GENERICO', '[]')),
+                'exibir_resultado_avaliadores' => (array) json_decode(env('AB_EXIBIR_RESULTADO_AVALIADORES', '["2","3"]')),
+                'email_recurso' => env('AB_EMAIL_RECURSO', ''),
+                'msg_recurso' => env('AB_MENSAGEM_RECURSO', ''),
 
                 'prefix_project' =>  'Lei Aldir Blanc | ' ,
                 'inciso2' =>
