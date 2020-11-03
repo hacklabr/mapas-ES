@@ -47,8 +47,8 @@ return [
                 // define a exibição do resultado das avaliações para cada status (1, 2, 3, 8, 10)
                 'exibir_resultado_padrao' => (array) json_decode(env('AB_EXIBIR_RESULTADO_PADRAO', '["1", "2", "3", "8", "10"]')),
                 'exibir_resultado_dataprev' => (array) json_decode(env('AB_EXIBIR_RESULTADO_DATAPREV', '[]')),
-                'exibir_resultado_generico' => (array) json_decode(env('AB_EXIBIR_RESULTADO_GENERICO', '[]')),
-                'exibir_resultado_avaliadores' => (array) json_decode(env('AB_EXIBIR_RESULTADO_AVALIADORES', '["2","3"]')),
+                'exibir_resultado_generico' => (array) json_decode(env('AB_EXIBIR_RESULTADO_GENERICO', '["10"]')),
+                'exibir_resultado_avaliadores' => (array) json_decode(env('AB_EXIBIR_RESULTADO_AVALIADORES', '[]')),
                 'email_recurso' => env('AB_EMAIL_RECURSO', ''),
                 'msg_recurso' => env('AB_MENSAGEM_RECURSO', ''),
 
