@@ -23,6 +23,10 @@ services:
       - mapasculturais
 
 
+  redis:
+    image: redis:5
+    command: --maxmemory 256Mb --maxmemory-policy allkeys-lru
+    
   certbot:
     image: certbot/certbot
     restart: unless-stopped
@@ -51,6 +55,9 @@ services:
       - ./em-breve:/var/www/html/em-breve
 
     environment:
+      - REDIS_CACHE=1
+      - SESSIONS_SAVE_PATH=tcp://redis:6379
+      
       - POSTGRES_PASSWORD=mapas
       - POSTGRES_USER=mapas
       - POSTGRES_DB=mapas

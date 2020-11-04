@@ -7,4 +7,6 @@ COPY compose/production/config.d /var/www/html/protected/application/conf/config
 COPY themes /var/www/html/protected/application/themes
 COPY plugins /var/www/html/protected/application/plugins
 
+COPY compose/common/php-ini.d /usr/local/etc/php/conf.d
+
 RUN curl https://raw.githubusercontent.com/opauth/facebook/master/FacebookStrategy.php > /var/www/html/protected/application/plugins/MultipleLocalAuth/Facebook/FacebookStrategy.php
