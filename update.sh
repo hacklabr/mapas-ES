@@ -6,5 +6,5 @@ git submodule update
 
 docker-compose -f docker-compose.prod.yml build --no-cache
 
-./stop.sh
-./start.sh
+docker-compose -f docker-compose.prod.yml stop mapasculturais
+docker-compose -f docker-compose.prod.yml start mapasculturais
