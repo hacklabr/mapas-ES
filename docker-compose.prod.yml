@@ -51,6 +51,7 @@ services:
       - ./docker-data/private-files:/var/www/private-files
 
       - ./compose/config-csv-inciso1.php:/var/www/html/protected/application/plugins/AldirBlancDataprev/config-csv-inciso1.php
+      - ./compose/config-csv-inciso2.php:/var/www/html/protected/application/plugins/AldirBlancDataprev/config-csv-inciso2.php
 
       - ./em-breve:/var/www/html/em-breve
 
