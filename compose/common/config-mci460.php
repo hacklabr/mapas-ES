@@ -28,7 +28,7 @@
  * ToDo: documentar assinaturas para esses métodos.
  */
 return [
-    "serial" => 0,
+    "serial" => 1,
     "branchMap" => "branchmap.csv",
     "fieldMap" => [
         "hasAccount" => "field_1",
@@ -105,13 +105,13 @@ return [
             "length" => 11,
             "type" => "int",
             "name" => "contaEmpresa",
-            "default" => 5688, // preenchimento SECULT
+            "default" => 5490, // preenchimento SECULT
         ],
         [
             "length" => 1,
             "type" => "text",
             "name" => "dvContaEmpresa",
-            "default" => "X", // preenchimento SECULT
+            "default" => "9", // preenchimento SECULT
         ],
         [
             "length" => 1,
