@@ -394,34 +394,31 @@ return [ //Configuração dos campos
         ],
         'IN_MULH_PROV_MONOPARENT' => [
             'positive' => [
-                'Não',
+                'Não','Sim'
             ],
             'negative' => [
-                'Sim',
             ],
-            'response' => 'No preenchimento do Formulário de Inscrição, o requerente não atendeu ao § 2º do Art. 6º da Lei 14.017/2020 e ao Inciso II do Art. 3º do Decreto nº 10.464/2020.',
+            'response' => 'Monoparental 1',
             'impediment' => true,
 
         ],
         'IND_MONOPARENTAL_OUTRO_REQUERIMENTO' => [
             'positive' => [
-                'Não',
+                'Não','Sim'
             ],
             'negative' => [
-                'Sim',
             ],
-            'response' => 'No preenchimento do Formulário de Inscrição, o requerente não atendeu ao § 2º do Art. 6º da Lei 14.017/2020 e ao Inciso II do Art. 3º do Decreto nº 10.464/2020.',
+            'response' => 'Monoparental 2',
             'impediment' => true,
 
         ],
         'CPF_OUTRO_REQUERENTE_CONJUGE_INFORMADO' => [
             'positive' => [
-                'Não',
+                'Não','Sim',''
             ],
             'negative' => [
-                'Sim',
             ],
-            'response' => 'No preenchimento do Formulário de Inscrição, o requerente não atendeu ao § 2º do Art. 6º da Lei 14.017/2020 e ao Inciso II do Art. 3º do Decreto nº 10.464/2020.',
+            'response' => 'Monoparental 3',
             'impediment' => true,
 
         ],
