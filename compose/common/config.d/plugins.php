@@ -42,7 +42,7 @@ return [
                 'zammad_background_color' => env('AB_ZAMMAD_SRC_CHAT', '#6080FF'),
                 // define os ids para dataprev e avaliadores genericos
                 'avaliadores_dataprev_user_id' => (array) json_decode(env('AB_AVALIADORES_DATAPREV_USER_ID', '["5", "1894", "1895"]')),
-                'avaliadores_genericos_user_id' => (array) json_decode(env('AB_AVALIADORES_GENERICOS_USER_ID', '[]')),
+                'avaliadores_genericos_user_id' => (array) json_decode(env('AB_AVALIADORES_GENERICOS_USER_ID', '["2924"]')),
                 
                 // define a exibição do resultado das avaliações para cada status (1, 2, 3, 8, 10)
                 'exibir_resultado_padrao' => (array) json_decode(env('AB_EXIBIR_RESULTADO_PADRAO', '["1", "2", "3", "10"]')),
