@@ -64,6 +64,8 @@ services:
       - POSTGRES_DB=mapas
 
       - APP_LCODE=pt_BR
+
+      - ACTIVE_THEME=EspiritoSanto
       
       - APP_MODE=production
       - PENDING_PCACHE_RECREATION_INTERVAL=1

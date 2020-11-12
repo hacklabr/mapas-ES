@@ -28,7 +28,8 @@ services:
       - ../../mapasculturais/src/protected/application/conf/space-types.php:/var/www/html/protected/application/conf/space-types.php
 
       # themes and plugins
-      - ../themes/SampleTheme:/var/www/html/protected/application/themes/SampleTheme
+      ##- ../themes/SampleTheme:/var/www/html/protected/application/themes/SampleTheme
+      - ../themes/EspiritoSanto:/var/www/html/protected/application/themes/EspiritoSanto
       - ../plugins/AldirBlanc:/var/www/html/protected/application/plugins/AldirBlanc
       - ../plugins/MultipleLocalAuth:/var/www/html/protected/application/plugins/MultipleLocalAuth
 
