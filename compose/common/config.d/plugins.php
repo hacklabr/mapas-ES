@@ -14,7 +14,7 @@ return [
                 'logotipo_central' => '/assets/aldirblanc/img/aldir-blanc.png',
                 'inciso1_enabled' => env('AB_INCISO1_ENABLE',true),
                 'inciso2_enabled' => env('AB_INCISO2_ENABLE',true),
-                'inciso3_enabled' => env('AB_INCISO3_ENABLE',false),
+                'inciso3_enabled' => env('AB_INCISO3_ENABLE',true),
                 'mediados_owner' => 1,
                 'project_id' => 1,
                 'inciso1' => (array) json_decode(env('AB_INCISO1', '[]')),
