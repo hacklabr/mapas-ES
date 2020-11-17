@@ -12,7 +12,8 @@ return [
             'config' => [
                 'logotipo_instituicao' => '/assets/aldirblanc/img/governo-cultura.png',
                 'logotipo_central' => '/assets/aldirblanc/img/aldir-blanc.png',
-                'inciso1_enabled' => env('AB_INCISO1_ENABLE',true),
+                'inciso1_enabled' => false,
+                'msg_inciso1_disabled' => 'Inscrições encerradas!',
                 'inciso2_enabled' => env('AB_INCISO2_ENABLE',true),
                 'inciso3_enabled' => true,
                 'mediados_owner' => 1,
