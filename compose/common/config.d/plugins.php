@@ -113,6 +113,8 @@ return [
                     (object) ["owner" =>2532, "city" => "Divino São Lourenço"],
                     (object) ["owner" =>2529, "city" => "Baixo Guandu"],
                     (object) ["owner" =>2479, "city" => "Brejetuba"],
+                    (object) ["owner" =>4227, "city" => "Mimoso do Sul"],
+                    (object) ["owner" =>4228, "city" => "Vila Valério "],
                 ],
             ],
         ],
