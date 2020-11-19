@@ -38,7 +38,7 @@ return [
                     'mediador3cidade@hacklab.com.br' => [41,40,38],
                     'mediador1cidade@hacklab.com.br' => [42],
                     'mediatudo@hacklab.com.br' => [],
-                    'veronica.rhaacke@gmail.com ' => []
+                    'veronica.rhaacke@gmail.com' => []
                 ],
                 'mediadores_prolongar_tempo' => env('AB_MEDIADORES_PROLONGAR_TEMPO', true),
 
