@@ -15,6 +15,8 @@ return [
                 'inciso1_enabled' => false,
                 'msg_inciso1_disabled' => 'Inscrições encerradas!',
                 'inciso2_enabled' => env('AB_INCISO2_ENABLE',true),
+                'msg_inciso2_disabled' => 'Inscrições encerradas!',
+
                 'inciso3_enabled' => true,
                 'mediados_owner' => 1,
                 'project_id' => 1,
@@ -37,6 +39,8 @@ return [
                     'mediador1cidade@hacklab.com.br' => [42],
                     'mediatudo@hacklab.com.br' => [],
                 ],
+                'mediadores_prolongar_tempo' => env('AB_MEDIADORES_PROLONGAR_TEMPO', true),
+
                 'zammad_enable' => env('AB_ZAMMAD_ENABLE', true),
                 'zammad_src_form' => env('AB_ZAMMAD_SRC_FORM', 'https://suporte.es.mapasculturais.com.br/assets/form/form.js'),
                 'zammad_src_chat' => env('AB_ZAMMAD_SRC_CHAT', 'https://suporte.es.mapasculturais.com.br/assets/chat/chat.min.js'),
