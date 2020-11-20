@@ -65,6 +65,10 @@ return [
                 'msg_status_notapproved' => env('AB_STATUS_NOTAPPROVED_MESSAGE', 'Seu cadastro foi analisado, mas não foi homologado.'), // STATUS_NOTAPPROVED = 3
                 'msg_status_waitlist' => env('AB_STATUS_WAITLIST_MESSAGE', 'Os recursos disponibilizados já foram destinados. Para sua solicitação ser aprovada será necessário aguardar possível liberação de recursos. Consulte novamente em outro momento.'), //STATUS_WAITLIST = 8
 
+                // mensagem para reprocessamento do Dataprev, para ignorar a mensagem retornada pelo Dataprev e exibir a mensagem abaixo
+                'msg_reprocessamento_dataprev' => env('AB_MENSAGEM_REPROCESSAMENTO_DATAPREV', 'O status de sua solicitação foi alterado de Selecionada para Inválida. Isso aconteceu por erro do DataPrev, sistema disponibilizado pelo governo federal para a averiguação de que as pessoas solicitantes do auxílio emergencial cumprem os critérios previstos na Lei Federal de número 14.017/2020, regulamentados pelo Decreto Estadual de número 4741-R.<br><br> 
+Por este novo processamento, o sistema acusa que seu CPF é "Titular de benefício previdenciário ou assistencial ou beneficiários do seguro desemprego ou contemplados com benefício emergencial'),
+
                 'prefix_project' =>  'Lei Aldir Blanc | ' ,
                 'inciso2' =>
                 [
