@@ -126,7 +126,7 @@ Por este novo processamento, o sistema acusa que seu CPF é "Titular de benefíc
         'AldirBlancDataprev' => [
             'namespace' => 'AldirBlancDataprev',
             'config' => [
-                'consolidacao_requer_validacoes' => ['generico', 'financeiro']
+                'consolidacao_requer_validacoes' => ['financeiro']
             ],
         ],
 
@@ -138,31 +138,6 @@ Por este novo processamento, o sistema acusa que seu CPF é "Titular de benefíc
                 'exportador_requer_validacao' => ['dataprev'],
                 'consolidacao_requer_homologacao' => false,
                 'consolidacao_requer_validacoes' => []
-            ],
-        ],
-
-        'Generico' => [
-            'namespace' => 'AldirBlancValidador',
-            'config' => [
-                'slug' => 'generico',
-                'exportador_requer_validacao' => ['dataprev'],
-                'exportador_requer_homologacao' => true,
-                'consolidacao_requer_homologacao' => true,
-                'consolidacao_requer_validacoes' => ['dataprev', 'financeiro'],
-                'inciso1' => [
-                    'CPF' => 21,
-                    'nome completo' => 22,
-                    'nome social' => 23,
-                    'origem' => 28,
-                    'gênero' => 29,
-                    'comunidade tradicional' => 6,
-                    'sexo' => 7,
-                    'raça/cor' => 9,
-                    'deficiência' => 5,
-                    'monoparental' => 10,
-                    'segmento de atuação' => 12
-                ],
-
             ],
         ],
         // 'AldirBlancRedirects' => [
