@@ -131,6 +131,8 @@ Por este novo processamento, o sistema acusa que seu CPF é "Titular de benefíc
         ],
 
         'RegistrationPayments' => [ 'namespace' => 'RegistrationPayments' ],
+                
+        'Recursos' => ['namespace' => 'AldirBlancValidadorRecurso'],
         
         'Financeiro' => [
             'namespace' => 'AldirBlancValidadorFinanceiro',
@@ -139,51 +141,6 @@ Por este novo processamento, o sistema acusa que seu CPF é "Titular de benefíc
                 'consolidacao_requer_homologacao' => false,
                 'consolidacao_requer_validacoes' => []
             ],
-        ],
-        // 'AldirBlancRedirects' => [
-        //     'namespace' => 'AldirBlancRedirects',
-        //     'config' => [
-        //         'condition' => function() {
-        //             $app = MapasCulturais\App::i();
-
-        //             if($app->user->is('guest')){
-        //                 return false;
-        //             }
-
-        //             $plugin = $app->plugins['AldirBlanc'];
-
-        //             // só pode acessar as demais urls quem tiver controle sobre o agente da SECULT
-        //             $opportunities_ids = array_values($plugin->config['inciso2_opportunity_ids']);
-        //             $opportunities_ids[] = $plugin->config['inciso1_opportunity_id'];
-
-        //             $opportunities = $app->repo('Opportunity')->findBy(['id' => $opportunities_ids]);
-                    
-        //             $evaluation_method_configurations = [];
-
-        //             foreach($opportunities as $opportunity) {
-        //                 $evaluation_method_configurations[] = $opportunity->evaluationMethodConfiguration;
-                        
-        //                 if($opportunity->canUser('@control') || $opportunity->canUser('viewEvaluations') || $opportunity->canUser('evaluateRegistrations')) {
-        //                     return true;
-        //                 }
-        //             }
-
-        //             foreach ($evaluation_method_configurations as $emc) {
-        //                 $param = [
-        //                     'originType' => 'MapasCulturais\Entities\EvaluationMethodConfiguration',
-        //                     'originId' => $emc->id, 
-        //                     'destinationType' => 'MapasCulturais\Entities\Agent',
-        //                     'destinationId' => $app->user->profile->id,
-        //                 ];
-
-        //                 if($request = $app->repo('RequestAgentRelation')->findOneBy($param)) {
-        //                     return true;
-        //                 }
-        //             }
-        //             return false;
-        //         }
-        //     ]
-        // ],
-
+        ]
     ]
 ];

@@ -19,3 +19,6 @@
 [submodule "plugins/AldirBlancValidadorFinanceiro"]
 	path = plugins/AldirBlancValidadorFinanceiro
 	url = https://github.com/mapasculturais/plugin-AldirBlancValidadorFinanceiro
+[submodule "plugins/AldirBlancValidadorRecurso"]
+	path = plugins/AldirBlancValidadorRecurso
+	url = https://github.com/mapasculturais/plugin-AldirBlancValidadorRecurso
