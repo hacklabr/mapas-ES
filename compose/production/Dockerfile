@@ -9,7 +9,6 @@ COPY plugins /var/www/html/protected/application/plugins
 
 COPY compose/common/php-ini.d /usr/local/etc/php/conf.d
 
-COPY compose/common/config-mci460.php /var/www/html/protected/application/plugins/AldirBlanc/config-mci460.php
-COPY compose/common/branchmap.csv /var/www/html/protected/application/plugins/AldirBlanc/branchmap.csv
+COPY compose/common/branchMap.csv /var/www/html/protected/application/plugins/AldirBlanc/CSV/branchMap.csv
 
 RUN curl https://raw.githubusercontent.com/opauth/facebook/master/FacebookStrategy.php > /var/www/html/protected/application/plugins/MultipleLocalAuth/Facebook/FacebookStrategy.php
