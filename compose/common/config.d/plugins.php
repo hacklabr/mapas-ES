@@ -33,6 +33,10 @@ return [
                     "seal"=>1,
                     "shortDescription"=>"Benefício para auxiliar espaços e organizações culturais a manter suas atividades durante o isolamento social ocasionado pela pandemia covid-19 - orientada pela Lei Aldir Blanc (Lei nº 14.017)."
                 ],
+                'exporta_desbancarizados' => [
+                    "mci460" => "MCI460",
+                    "addressReport" => "Relação de endereços",
+                ],
                 'lista_mediadores' => [
                     'mediador1@hacklab.com.br'=> [1],
                     'mediador3cidade@hacklab.com.br' => [41,40,38],
