@@ -81,10 +81,10 @@ return [
             'field_id' => null,
             'type' => 'string',
         ],
-        'CONVENIO_BB4' => [ // Campo dedicado a testes, Em teoria quando um arquivo for enviado ao BB como TESTE deve-se insetir as letras TS na chave default do array
+        'CONVENIO_BB4' => [ // Campo dedicado a testes, Em teoria quando um arquivo for enviado ao BB como TESTE deve-se insetir as letras TS exite opção na janela de exportação para informar se o arquivo é teste ou não 
             'length' => 2,
             'default' => null,
-            'field_id' => null,
+            'field_id' => 'mapped',
             'type' => 'string',
         ],
         'AGENCIA' => [ //Agência bancária de fonte pagadora
@@ -263,10 +263,10 @@ return [
             'field_id' => null,
             'type' => 'string',
         ],
-        'CONVENIO_BB4' => [ // Campo dedicado a testes, Em teoria quando um arquivo for enviado ao BB como TESTE deve-se insetir as letras TS na chave default do array
+        'CONVENIO_BB4' => [ // Campo dedicado a testes, Em teoria quando um arquivo for enviado ao BB como TESTE deve-se insetir as letras TS exite opção na janela de exportação para informar se o arquivo é teste ou não 
             'length' => 2,
             'default' => null,
-            'field_id' => null,
+            'field_id' => 'mapped',
             'type' => 'string',
         ],
         'AGENCIA' => [ //Agência bancária de fonte pagadora
@@ -409,10 +409,10 @@ return [
             'field_id' => null,
             'type' => 'int',
         ],       
-        'CAMARA_CENTRALIZADORA' => [ //Por defalt deixar sempre 000 segundo Planilha
+        'CAMARA_CENTRALIZADORA' => [ //Deixar por default o fild_id em mapped. Exportador se encarrega de processar
             'length' => 3,
-            'default' => '000',
-            'field_id' => null,
+            'default' => null,
+            'field_id' => 'mapped',
             'type' => 'int',
         ],
         'BEN_CODIGO_BANCO' => [ // Field_id do campo da instituição bancária do beneficiário
@@ -569,10 +569,10 @@ return [
             'field_id' => null,
             'type' => 'string',
         ],
-        'BEN_TIPO_DOC' => [ // Tipo de documento do requerente, CPF ou CNPJ, (1 = CPF, 2 = CNPJ)
+        'BEN_TIPO_DOC' => [ // Tipo de documento do requerente, CPF ou CNPJ, (1 = CPF, 2 = CNPJ). processo automatizado no exportador. Conta-se a quantidade de char do documento se for menor que 11 char, insere 1 no campo se for maisor insere 2
             'length' => 1,
-            'default' => 1,
-            'field_id' => null,
+            'default' => null,
+            'field_id' => 'mapped',
             'type' => 'int',
         ],
         'BEN_CPF' => [ // Field_id do campo do CPF ou CNPJ do beneficiário, se atentar ao respondido no BEN_TIPO_DOC
@@ -581,10 +581,10 @@ return [
             'field_id' => 'field_21',
             'type' => 'int',
         ],
-        'BEN_ENDERECO_LOGRADOURO' => [ // Field_id do campo do logradouro do beneficiário
+        'BEN_ENDERECO_LOGRADOURO' => [ // Field_id do campo do logradouro do beneficiário (Para se garantir o retorno do número da inscrção, fomos orientados pelo BB a inserir o número da inscrição nesse pnto. Caso queira o logradouro, remover o mapped do field_id e inserir o field_id do logradouro) LEMBRANDO QUE ESSA CAMPO NÃO É CRITICADO PELO BB
             'length' => 30,
             'default' => null,
-            'field_id' => 'field_8',
+            'field_id' => 'mapped',
             'type' => 'string',
         ],
         'BEN_ENDERECO_NUMERO' => [ // Field_id do campo do numero endereço do beneficiário
