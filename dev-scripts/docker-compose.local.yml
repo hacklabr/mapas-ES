@@ -32,6 +32,13 @@ services:
       - ../themes/EspiritoSanto:/var/www/html/protected/application/themes/EspiritoSanto
       - ../plugins/AldirBlanc:/var/www/html/protected/application/plugins/AldirBlanc
       - ../plugins/MultipleLocalAuth:/var/www/html/protected/application/plugins/MultipleLocalAuth
+      - ../plugins/AldirBlancDataprev:/var/www/html/protected/application/plugins/AldirBlancDataprev
+      - ../plugins/AldirBlancValidadorFinanceiro:/var/www/html/protected/application/plugins/AldirBlancValidadorFinanceiro
+      - ../plugins/RegistrationPayments:/var/www/html/protected/application/plugins/RegistrationPayments
+      - ../plugins/AldirBlancValidador:/var/www/html/protected/application/plugins/AldirBlancValidador
+      - ../compose/config-cnab240-inciso1.php:/var/www/html/protected/application/plugins/AldirBlanc/config-cnab240-inciso1.php
+      - ../compose/config-import-cnab240.php:/var/www/html/protected/application/plugins/AldirBlanc/config-import-cnab240.php
+      
 
     environment:
       - PENDING_PCACHE_RECREATION_INTERVAL=10

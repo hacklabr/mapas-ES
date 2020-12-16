@@ -134,6 +134,34 @@ Por este novo processamento, o sistema acusa que seu CPF é "Titular de benefíc
             ],
         ],
 
+        'SECULT' => [
+            'namespace' => 'AldirBlancValidador',
+            'config' => [
+                // slug utilizado como id do controller e identificador do validador
+                'slug' => 'secult',
+
+                // nome apresentado na interface
+                'name' => 'SECULT',
+
+                'forcar_resultado' => true,
+
+                'consolidacao_requer_homologacao' => false,
+
+                // indica que só deve exportar as inscrições já homologadas
+                'exportador_requer_homologacao' => true,
+
+                // indica que a exportação não requer nenhuma validação
+                'exportador_requer_validacao' => [],
+
+                // indica que só deve consolidar o resultado se a inscrição
+                // já tiver sido processada pelo Dataprev
+                'consolidacao_requer_validacoes' => [],
+
+                'inciso1' => [],
+            ]
+        ],
+
+
         'RegistrationPayments' => [ 'namespace' => 'RegistrationPayments' ],
                 
         'Recursos' => ['namespace' => 'AldirBlancValidadorRecurso'],
