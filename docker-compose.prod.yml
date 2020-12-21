@@ -54,6 +54,7 @@ services:
       - ./compose/config-csv-inciso2.php:/var/www/html/protected/application/plugins/AldirBlancDataprev/config-csv-inciso2.php
       - ./compose/config-cnab240-inciso1.php:/var/www/html/protected/application/plugins/AldirBlanc/config-cnab240-inciso1.php
       - ./compose/config-import-cnab240.php:/var/www/html/protected/application/plugins/AldirBlanc/config-import-cnab240.php
+      - ./compose/config-mci460.php:/var/www/html/protected/application/plugins/AldirBlanc/config-mci460.php
       - ./em-breve:/var/www/html/em-breve
 
     environment:
