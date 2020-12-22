@@ -188,6 +188,28 @@ Por este novo processamento, o sistema acusa que seu CPF é "Titular de benefíc
             ]
         ],
 
+        'PreDataprev' => [
+            'namespace' => 'AldirBlancValidador',
+            'config' => [
+                // slug utilizado como id do controller e identificador do validador
+                'slug' => 'pre_dataprev',
+
+                // nome apresentado na interface
+                'name' => 'Pré-processamento Dataprev',
+
+                'forcar_resultado' => true,
+
+                'consolidacao_requer_homologacao' => false,
+
+                // invalidada a exportação pq não faz sentido
+                'exportador_requer_validacao' => ['nao-exportar'],
+
+                'consolidacao_requer_validacoes' => [],
+
+                'inciso1' => [],
+            ]
+        ],
+
 
         'RegistrationPayments' => [ 'namespace' => 'RegistrationPayments' ],
                 
