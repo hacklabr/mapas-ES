@@ -18,7 +18,7 @@ services:
       - ../docker-data/public-files:/var/www/html/files
       - ../docker-data/private-files:/var/www/private-files
       - ../docker-data/pcache-cron.log:/var/www/scripts/nohup.out
-
+      - ../../mapasculturais/src/protected/application/conf/conf-base.d:/var/www/html/protected/application/conf/conf-base.d
       - ../compose/common/config.d:/var/www/html/protected/application/conf/conf-common.d
       - ../compose/local/config.d:/var/www/html/protected/application/conf/config.d
       - ../../mapasculturais/src/protected/application/themes:/var/www/html/protected/application/themes
