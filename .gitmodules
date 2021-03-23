@@ -22,3 +22,6 @@
 [submodule "plugins/AldirBlancValidadorRecurso"]
 	path = plugins/AldirBlancValidadorRecurso
 	url = https://github.com/mapasculturais/plugin-AldirBlancValidadorRecurso
+[submodule "plugins/MapasNetwork"]
+	path = plugins/MapasNetwork
+	url = https://github.com/mapasculturais/plugin-MapasNetwork
