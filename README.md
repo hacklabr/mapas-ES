@@ -1,5 +1,5 @@
 # Mapa Cultural do Espírito Santo
-Repositório do Mapa Cultural do Espírito Santo.
+Repositório do Mapa Cultural do Espírito Santo
 
 Este repositório já utiliza como autenticador o plugin MultipleLocalAuth.
 
