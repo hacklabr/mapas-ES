@@ -62,7 +62,7 @@ meu-mapas/dev-scripts/$ sudo ./start-dev.sh
 acesse no seu navegador http://localhost:8080/
 
 #### psysh
-Este ambiente roda com o built-in web server do PHP, o que possibilita que seja utilizado o [PsySH](https://psysh.org/]), um console interativo para debug e desenvolvimento. 
+Este ambiente roda com o built-in web server do PHP, o que possibilita que seja utilizado o [PsySH](https://psysh.org/), um console interativo para debug e desenvolvimento. 
 
 no lugar desejado, adicione a linha `eval(\psy\sh());` e você obterá um console. `Ctrl + D` para continuar a execução do código.
 
