@@ -24,39 +24,13 @@ Antes de tudo certifique-se de ter os pacotes _git_, _docker_ e _docker-compose_
 
 _Nos exemplos é usado o comando sudo para que os scripts tenham os privilégios requeridos pelo docker._
 
-### Criando repositório do projeto
-Crie um repositório vazio no github ou gitlab (usarei de exemplo o nome _https://github.com/organizacao/meu-mapas_)
-
-Clone o repositório do projeto base no seu computador
-```
-$ git clone https://github.com/mapasculturais/mapasculturais-aldirblanc.git meu-mapas --recursive 
-$ cd meu-mapas
-```
-
-Substitua a url do remote origin para a url de seu repositório
-```
-meu-mapas/$ git remote set-url origin https://github.com/organizacao/meu-mapas
-
-# ou, se você tiver sua chave no github
-meu-mapas/$ git remote set-url origin git@github.com:organizacao/meu-mapas
-
-```
-
-Dê git push no repositório para enviar a versão inicial para seu repositório vazio.
-```
-meu-mapas/$ git push
-To github.com:organizacao/meu-mapas
- * [new branch]      master -> master
-
-```
-
 ### Ambiente de desenvolvimento
 
 #### Iniciando o ambiente de desenvolvimento
 Para subir o ambiente de desenvolvimento basta entrar na pasta `dev-scripts` e rodar o script `start-dev.sh`.
 
 ```
-meu-mapas/dev-scripts/$ sudo ./start-dev.sh
+mapas-es/dev-scripts/$ sudo ./start-dev.sh
 ```
 
 acesse no seu navegador http://localhost:8080/
