@@ -32,7 +32,6 @@ Para subir o ambiente de desenvolvimento basta entrar na pasta `dev-scripts` e r
 ```
 mapas-es/dev-scripts/$ sudo ./start-dev.sh
 ```
-
 acesse no seu navegador http://localhost:8080/
 
 #### psysh
