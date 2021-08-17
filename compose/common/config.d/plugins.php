@@ -5,7 +5,7 @@ return [
         'EvaluationMethodTechnical' => ['namespace' => 'EvaluationMethodTechnical'],
         'EvaluationMethodSimple' => ['namespace' => 'EvaluationMethodSimple'],
         'EvaluationMethodDocumentary' => ['namespace' => 'EvaluationMethodDocumentary'],
-        'MapasNetwork' => ['namespace' => 'MapasNetwork'],
+        // 'MapasNetwork' => ['namespace' => 'MapasNetwork'],
         
         'MultipleLocalAuth' => [ 'namespace' => 'MultipleLocalAuth' ],
         'AldirBlanc' => [
