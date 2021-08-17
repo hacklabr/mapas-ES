@@ -1,1 +1,1 @@
-<h1 id="brand-logo"><a href="<?php echo $app->getBaseUrl() ?>"><img src="<?php $this->asset('img/logo-site.png'); ?>" /></a></h1>
+<h1 id="brand-logo"><a href="<?php echo $app->getBaseUrl() ?>"><img src="<?php $this->asset('img/logo-es.png'); ?>" /></a></h1>
