@@ -5,7 +5,6 @@ return [
         'EvaluationMethodTechnical' => ['namespace' => 'EvaluationMethodTechnical'],
         'EvaluationMethodSimple' => ['namespace' => 'EvaluationMethodSimple'],
         'EvaluationMethodDocumentary' => ['namespace' => 'EvaluationMethodDocumentary'],
-        // 'MapasNetwork' => ['namespace' => 'MapasNetwork'],
         
         'MultipleLocalAuth' => [ 'namespace' => 'MultipleLocalAuth' ],
         'AldirBlanc' => [
@@ -223,6 +222,16 @@ Por este novo processamento, o sistema acusa que seu CPF é "Titular de benefíc
                 'consolidacao_requer_homologacao' => false,
                 'consolidacao_requer_validacoes' => []
             ],
-        ]
+        ],
+        "MapasNetwork" => [
+            "namespace" => "MapasNetwork",
+            "config" => [
+                'nodes' => explode(",", env("MAPAS_NETWORK_NODES", "")),
+                'filters' => [
+                    'agent' => [ 'En_Estado' => 'ES' ],
+                    'space' => [ 'En_Estado' => 'ES' ],
+                ]
+            ]
+        ]    
     ]
 ];
