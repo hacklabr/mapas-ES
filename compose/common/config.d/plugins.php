@@ -1,6 +1,6 @@
 <?php
 
-return [
+$config_plugins = [
     'plugins' => [
         'EvaluationMethodTechnical' => ['namespace' => 'EvaluationMethodTechnical'],
         'EvaluationMethodSimple' => ['namespace' => 'EvaluationMethodSimple'],
@@ -235,3 +235,9 @@ Por este novo processamento, o sistema acusa que seu CPF é "Titular de benefíc
         ]    
     ]
 ];
+
+if(!env("MAPAS_NETWORK_ENABLED", false)){
+    unset($config_plugin['plugins']['MapasNetwork']);
+}
+
+return $config_plugin;
