@@ -237,7 +237,7 @@ Por este novo processamento, o sistema acusa que seu CPF é "Titular de benefíc
 ];
 
 if(!env("MAPAS_NETWORK_ENABLED", false)){
-    unset($config_plugin['plugins']['MapasNetwork']);
+    unset($config_plugins['plugins']['MapasNetwork']);
 }
 
-return $config_plugin;
+return $config_plugins;
