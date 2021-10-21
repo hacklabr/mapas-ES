@@ -16,4 +16,16 @@ return [
             }
         }
     },
+    'DB Update para criação de revisão Oportunidade 156' => function () use ($app, $em, $conn) {
+        $dql = "SELECT re.id FROM MapasCulturais\\Entities\\RegistrationEvaluation re WHERE re.registration in (select r.id from  MapasCulturais\\Entities\\Registration r WHERE r.opportunity = 156) ";
+        $query = $app->em->createQuery($dql);
+        $ids = $query->getResult();
+
+        foreach($ids as $id){
+            $evaluation = $app->repo("RegistrationEvaluation")->find($id['id']);
+            if(!$evaluation->getRevisions()){
+                $evaluation->_newCreatedRevision();
+            }
+        }
+    },
 ];
