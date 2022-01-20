@@ -227,6 +227,7 @@ Por este novo processamento, o sistema acusa que seu CPF é "Titular de benefíc
             "namespace" => "MapasNetwork",
             "config" => [
                 'nodes' => explode(",", env("MAPAS_NETWORK_NODES", "")),
+                "nodeSlug" => env("MAPAS_NETWORK_SLUG", ($_SERVER["HOSTNAME"] ?? parse_url(\MapasCulturais\App::i()->baseUrl, PHP_URL_HOST))),
                 'filters' => [
                     'agent' => [ 'En_Estado' => 'ES' ],
                     'space' => [ 'En_Estado' => 'ES' ],
