@@ -19,7 +19,7 @@ return [
 
         'google-recaptcha-secret' => env('GOOGLE_RECAPTCHA_SECRET', false),
         'google-recaptcha-sitekey' => env('GOOGLE_RECAPTCHA_SITEKEY', false),
-        
+        'statusCreateAgent' => env('STATUS_CREATE_AGENT', 0),
         'strategies' => [
            'Facebook' => array(
                 'visible' => env('AUTH_FACEBOOK_VISIBLE', false),
@@ -40,7 +40,7 @@ return [
                 'client_id' => env('AUTH_GOOGLE_CLIENT_ID', null),
                 'client_secret' => env('AUTH_GOOGLE_CLIENT_SECRET', null),
                 'redirect_uri' => $_APP_BASE_URL . 'autenticacao/google/oauth2callback',
-                'scope' => env('AUTH_GOOGLE_SCOPE', 'email'),
+                'scope' => env('AUTH_GOOGLE_SCOPE', 'email profile'),
             ),
             'Twitter' => array(
                 'visible' => env('AUTH_TWITTER_VISIBLE', false),
