@@ -8,9 +8,26 @@ stages:
 - deploy
 
 variables:
+  DEVELOP_IMAGE: $CI_REGISTRY_IMAGE:$CI_BUILD_REF_NAME-$CI_COMMIT_SHORT_SHA
   HOMOLOG_IMAGE: $CI_REGISTRY_IMAGE:$CI_BUILD_REF_NAME-$CI_COMMIT_SHORT_SHA
   RELEASE_IMAGE: $CI_REGISTRY_IMAGE:$CI_BUILD_REF_NAME
   KUBECONFIG: /etc/k8s-config
+
+build to develop:
+  variables:
+    GIT_SUBMODULE_STRATEGY: normal
+  stage: build
+  script:
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
+    - docker pull mapasculturais/mapasculturais:v5.1
+    - docker pull mapasculturais/mapasculturais:develop
+    - docker build -t $DEVELOP_IMAGE -f compose/develop/Dockerfile .
+    - docker push $DEVELOP_IMAGE
+  only:
+    - /develop/
+  environment: develop
+  tags:
+    - docker
 
 build to homolog:
   variables:
@@ -19,7 +36,7 @@ build to homolog:
   stage: build
   script:
     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
-    - docker pull mapasculturais/mapasculturais:v5.1.0-RC
+    - docker pull mapasculturais/mapasculturais:v5.1
     - docker pull mapasculturais/mapasculturais:develop
     - docker build -t $HOMOLOG_IMAGE -f compose/production/Dockerfile .
     - docker push $HOMOLOG_IMAGE
