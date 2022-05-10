@@ -25,3 +25,6 @@
 [submodule "plugins/MapasNetwork"]
 	path = plugins/MapasNetwork
 	url = https://github.com/mapasculturais/plugin-MapasNetwork
+[submodule "plugins/LocationPatch"]
+	path = plugins/LocationPatch
+	url = https://github.com/mapasculturais/plugin-LocationPatch
