@@ -58,7 +58,7 @@ services:
       - ./em-breve:/var/www/html/em-breve
 
     environment:
-      - REDIS_CACHE=1
+      - REDIS_CACHE=redis
       - SESSIONS_SAVE_PATH=tcp://redis:6379
       
       - POSTGRES_PASSWORD=mapas
