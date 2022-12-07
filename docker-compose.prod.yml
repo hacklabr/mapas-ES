@@ -22,10 +22,17 @@ services:
     links:
       - mapasculturais
 
+  sessions:
+    image: redis:6
+    restart: unless-stopped
+    command: --maxmemory 384Mb --maxmemory-policy allkeys-lru
+    volumes:
+      - ./docker-data/sessions:/data
 
   redis:
-    image: redis:5
-    command: --maxmemory 256Mb --maxmemory-policy allkeys-lru
+    image: redis:6
+    restart: unless-stopped
+    command: --maxmemory 384Mb --maxmemory-policy allkeys-lru
     
   certbot:
     image: certbot/certbot
@@ -59,7 +66,7 @@ services:
 
     environment:
       - REDIS_CACHE=redis
-      - SESSIONS_SAVE_PATH=tcp://redis:6379
+      - SESSIONS_SAVE_PATH=tcp://sessions:6379
       
       - POSTGRES_PASSWORD=mapas
       - POSTGRES_USER=mapas
@@ -85,6 +92,12 @@ services:
 
     depends_on:
       - db
+      - redis
+      - sessions
+    links:
+      - db
+      - redis
+      - sessions
       
   db:
     image: mdillon/postgis:11
