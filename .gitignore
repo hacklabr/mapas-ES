@@ -1,3 +1,8 @@
 docker-data
 node_modules
 vendorcompose/local/dump.sql
+docker-data/public-files
+docker-data/db-data
+docker-data/private-files
+docker-data/*
+dumps/*
