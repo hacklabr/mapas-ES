@@ -40,4 +40,17 @@ return [
             }
         }
     },
+    'DB Update para criação de revisão das inscrições da oportunidade 479' => function () use ($app, $em, $conn) {
+        $dql = "select r.id from  MapasCulturais\\Entities\\Registration r WHERE r.opportunity = 479";
+        $query = $app->em->createQuery($dql);
+        $ids = $query->getResult();
+        foreach($ids as $id){
+            $reg = $app->repo("Registration")->find($id['id']);
+            if(!$reg->getRevisions()){
+                $reg->_newCreatedRevision();
+                $app->log->debug("Revision da inscrição {$reg->id} Criada");
+            }
+            $app->em->clear();
+        }
+    },
 ];
