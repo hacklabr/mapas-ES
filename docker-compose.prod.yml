@@ -100,7 +100,7 @@ services:
       - sessions
       
   db:
-    image: mdillon/postgis:11
+    image: postgis/postgis:14-master
     restart: unless-stopped
     environment:
       - POSTGRES_PASSWORD=mapas
