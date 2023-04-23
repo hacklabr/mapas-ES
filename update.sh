@@ -1,5 +1,5 @@
 #!/bin/bash
-docker pull hacklab/mapasculturais:v5.2
+echo "atualizando ambiente em:" $(date)
 git pull
 
 git submodule update
