@@ -5,6 +5,9 @@ $config_plugins = [
         'EvaluationMethodTechnical' => ['namespace' => 'EvaluationMethodTechnical'],
         'EvaluationMethodSimple' => ['namespace' => 'EvaluationMethodSimple'],
         'EvaluationMethodDocumentary' => ['namespace' => 'EvaluationMethodDocumentary'],
+        'EvaluationMethodQualification' => ['namespace' => 'EvaluationMethodQualification'],
+        'MultipleLocalAuth' => [ 'namespace' => 'MultipleLocalAuth' ],
+        'RegistrationPayments' => [ 'namespace' => 'RegistrationPayments' ],
 
         "LocationPatch" => [
             "namespace" => "LocationPatch",
@@ -22,8 +25,21 @@ $config_plugins = [
                 "cutoff" => env("LOCATION_PATCH_CUTOFF", "20220510120000"),
             ],
         ],
-        
-        'MultipleLocalAuth' => [ 'namespace' => 'MultipleLocalAuth' ],
+
+
+        "MapasNetwork" => [
+            "namespace" => "MapasNetwork",
+            "config" => [
+                'nodes' => explode(",", env("MAPAS_NETWORK_NODES", "")),
+                "nodeSlug" => env("MAPAS_NETWORK_SLUG", ($_SERVER["HOSTNAME"] ?? parse_url(\MapasCulturais\App::i()->baseUrl, PHP_URL_HOST))),
+                'filters' => [
+                    'agent' => [ 'En_Estado' => 'ES' ],
+                    'space' => [ 'En_Estado' => 'ES' ],
+                ]
+            ]
+        ]  
+        /*
+        // PLUGINS INCOMPATÍVEIS COM O BASE V2
         'AldirBlanc' => [
             'namespace' => 'AldirBlanc',
             'config' => [
@@ -226,9 +242,6 @@ Por este novo processamento, o sistema acusa que seu CPF é "Titular de benefíc
                 'inciso1' => [],
             ]
         ],
-
-
-        'RegistrationPayments' => [ 'namespace' => 'RegistrationPayments' ],
                 
         'Recursos' => ['namespace' => 'AldirBlancValidadorRecurso'],
         
@@ -240,17 +253,7 @@ Por este novo processamento, o sistema acusa que seu CPF é "Titular de benefíc
                 'consolidacao_requer_validacoes' => []
             ],
         ],
-        "MapasNetwork" => [
-            "namespace" => "MapasNetwork",
-            "config" => [
-                'nodes' => explode(",", env("MAPAS_NETWORK_NODES", "")),
-                "nodeSlug" => env("MAPAS_NETWORK_SLUG", ($_SERVER["HOSTNAME"] ?? parse_url(\MapasCulturais\App::i()->baseUrl, PHP_URL_HOST))),
-                'filters' => [
-                    'agent' => [ 'En_Estado' => 'ES' ],
-                    'space' => [ 'En_Estado' => 'ES' ],
-                ]
-            ]
-        ]    
+        */  
     ]
 ];
 
