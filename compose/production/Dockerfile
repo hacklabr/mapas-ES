@@ -10,3 +10,7 @@ COPY plugins /var/www/html/protected/application/plugins
 COPY compose/common/php-ini.d /usr/local/etc/php/conf.d
 
 COPY compose/common/branchMap.csv /var/www/html/protected/application/plugins/AldirBlanc/CSV/branchMap.csv
+
+workdir /var/www/html/protected
+RUN pnpm install --recursive && pnpm run build 
+workdir /var/www/html

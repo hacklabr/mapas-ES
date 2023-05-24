@@ -20,15 +20,10 @@ services:
       - ../docker-data/pcache-cron.log:/var/www/scripts/nohup.out
       - ../compose/common/config.d:/var/www/html/protected/application/conf/conf-common.d
       - ../compose/local/config.d:/var/www/html/protected/application/conf/config.d
-      - ../../mapasculturais/src/protected/application/themes:/var/www/html/protected/application/themes
-      - ../../mapasculturais/src/protected/application/lib:/var/www/html/protected/application/lib
-      - ../../mapasculturais/src/protected/db-updates.php:/var/www/html/protected/db-updates.php
-      - ../../mapasculturais/src/protected/application/conf/agent-types.php:/var/www/html/protected/application/conf/agent-types.php
-      - ../../mapasculturais/src/protected/application/conf/space-types.php:/var/www/html/protected/application/conf/space-types.php
+      - ../core/protected/application/lib:/var/www/html/protected/application/lib
 
       # themes and plugins
-      ##- ../themes/SampleTheme:/var/www/html/protected/application/themes/SampleTheme
-      - ../themes/EspiritoSanto:/var/www/html/protected/application/themes/EspiritoSanto
+      - ../themes/MapaCulturalCapixaba:/var/www/html/protected/application/themes/MapaCulturalCapixaba
       - ../plugins/AldirBlanc:/var/www/html/protected/application/plugins/AldirBlanc
       - ../plugins/MultipleLocalAuth:/var/www/html/protected/application/plugins/MultipleLocalAuth
       - ../plugins/AldirBlancDataprev:/var/www/html/protected/application/plugins/AldirBlancDataprev
@@ -43,16 +38,28 @@ services:
       - PENDING_PCACHE_RECREATION_INTERVAL=10
       - APP_MODE=development
       - CACHE_ASSETS_URL=false
-
+      - REDIS_CACHE=redis
+      - MAILER_SERVER=mailhog
+      - MAILER_PORT=1025
     depends_on:
       - db
       - watcher
+      - redis
   
     stdin_open: true
     tty: true
 
+  mailhog: 
+    image: mailhog/mailhog
+    ports:
+      - "8025:8025"
+
+  redis:
+    image: redis:6
+    command: --maxmemory 256Mb --maxmemory-policy allkeys-lru  
+
   db:
-    image: mdillon/postgis:11
+    image: postgis/postgis:14-master
     environment:
       - POSTGRES_PASSWORD=mapas
       - POSTGRES_USER=mapas
@@ -60,8 +67,9 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - ../compose/local/dump.sql:/docker-entrypoint-initdb.d/dump.sql
-      - ../docker-data/db-data:/var/lib/postgresql/data
+      - ../docker-data/empty:/docker-entrypoint-initdb.d
+      - ../compose/2023-05-11-00H_00.sql.gz:/docker-entrypoint-initdb.d/dump.sql.gz
+      - ../docker-data/2023-05-11-00H_00:/var/lib/postgresql/data
 
 volumes:
   db-data:

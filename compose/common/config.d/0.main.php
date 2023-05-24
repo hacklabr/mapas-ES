@@ -22,7 +22,7 @@ return [
     'app.siteName' => env('SITE_NAME', 'Mapa Cultural ES'),
     'app.siteDescription' => env('SITE_DESCRIPTION', 'Solução para os cadastros da Lei Aldir Blanc'),
 
-    'themes.active' => env('ACTIVE_THEME', 'EspiritoSanto'),
+    'themes.active' => env('ACTIVE_THEME', 'MapaCulturalCapixaba'),
 
     'app.lcode' => env('APP_LCODE', 'pt_BR'),
 
