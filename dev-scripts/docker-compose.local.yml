@@ -36,6 +36,7 @@ services:
       - ../plugins/AldirBlancValidadorFinanceiro:/var/www/html/protected/application/plugins/AldirBlancValidadorFinanceiro
       - ../plugins/RegistrationPayments:/var/www/html/protected/application/plugins/RegistrationPayments
       - ../plugins/AldirBlancValidador:/var/www/html/protected/application/plugins/AldirBlancValidador
+      - ../plugins/MapasBlame:/var/www/html/protected/application/plugins/MapasBlame
       - ../compose/config-cnab240-inciso1.php:/var/www/html/protected/application/plugins/AldirBlanc/config-cnab240-inciso1.php
       - ../compose/config-import-cnab240.php:/var/www/html/protected/application/plugins/AldirBlanc/config-import-cnab240.php
       
