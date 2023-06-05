@@ -250,7 +250,8 @@ Por este novo processamento, o sistema acusa que seu CPF é "Titular de benefíc
                     'space' => [ 'En_Estado' => 'ES' ],
                 ]
             ]
-        ]    
+        ],
+        'MapasBlame' => ['namespace' => 'MapasBlame']    
     ]
 ];
 

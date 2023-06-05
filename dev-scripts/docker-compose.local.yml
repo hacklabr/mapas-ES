@@ -19,6 +19,7 @@ services:
       - ../docker-data/private-files:/var/www/private-files
       - ../docker-data/pcache-cron.log:/var/www/scripts/nohup.out
       - ../compose/common/config.d:/var/www/html/protected/application/conf/conf-common.d
+      - ../compose/common/lgpd-terms:/var/www/html/protected/application/conf/lgpd-terms
       - ../compose/local/config.d:/var/www/html/protected/application/conf/config.d
       - ../../mapasculturais/src/protected/application/themes:/var/www/html/protected/application/themes
       - ../../mapasculturais/src/protected/application/lib:/var/www/html/protected/application/lib
@@ -35,6 +36,7 @@ services:
       - ../plugins/AldirBlancValidadorFinanceiro:/var/www/html/protected/application/plugins/AldirBlancValidadorFinanceiro
       - ../plugins/RegistrationPayments:/var/www/html/protected/application/plugins/RegistrationPayments
       - ../plugins/AldirBlancValidador:/var/www/html/protected/application/plugins/AldirBlancValidador
+      - ../plugins/MapasBlame:/var/www/html/protected/application/plugins/MapasBlame
       - ../compose/config-cnab240-inciso1.php:/var/www/html/protected/application/plugins/AldirBlanc/config-cnab240-inciso1.php
       - ../compose/config-import-cnab240.php:/var/www/html/protected/application/plugins/AldirBlanc/config-import-cnab240.php
       
