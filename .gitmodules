@@ -1,30 +1,6 @@
-[submodule "plugins/AldirBlanc"]
-	path = plugins/AldirBlanc
-	url = https://github.com/mapasculturais/plugin-AldirBlanc.git
 [submodule "plugins/MultipleLocalAuth"]
 	path = plugins/MultipleLocalAuth
 	url = https://github.com/mapasculturais/plugin-MultipleLocalAuth
-[submodule "plugins/AldirBlancRedirects"]
-	path = plugins/AldirBlancRedirects
-	url = https://github.com/mapasculturais/plugin-AldirBlancRedirects.git
-[submodule "plugins/AldirBlancDataprev"]
-	path = plugins/AldirBlancDataprev
-	url = https://github.com/mapasculturais/plugin-AldirBlancDataprev
-[submodule "plugins/AldirBlancValidador"]
-	path = plugins/AldirBlancValidador
-	url = https://github.com/mapasculturais/plugin-AldirBlancValidador
 [submodule "plugins/RegistrationPayments"]
 	path = plugins/RegistrationPayments
 	url = https://github.com/mapasculturais/plugin-RegistrationPayments
-[submodule "plugins/AldirBlancValidadorFinanceiro"]
-	path = plugins/AldirBlancValidadorFinanceiro
-	url = https://github.com/mapasculturais/plugin-AldirBlancValidadorFinanceiro
-[submodule "plugins/AldirBlancValidadorRecurso"]
-	path = plugins/AldirBlancValidadorRecurso
-	url = https://github.com/mapasculturais/plugin-AldirBlancValidadorRecurso
-[submodule "plugins/MapasNetwork"]
-	path = plugins/MapasNetwork
-	url = https://github.com/mapasculturais/plugin-MapasNetwork
-[submodule "plugins/LocationPatch"]
-	path = plugins/LocationPatch
-	url = https://github.com/mapasculturais/plugin-LocationPatch
