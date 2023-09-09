@@ -48,21 +48,17 @@ services:
       - mapasculturais.prod.env
     build:
       context: ./
-      dockerfile: compose/production/Dockerfile
+      dockerfile: docker/Dockerfile
     restart: unless-stopped
     ports:
       - "9000:9000"
     volumes:
+      - ./docker/production/config.d:/var/www/config/config.d
+
       - ./docker-data/assets:/var/www/html/assets
       - ./docker-data/public-files:/var/www/html/files
       - ./docker-data/private-files:/var/www/private-files
-
-      - ./compose/config-csv-inciso1.php:/var/www/html/protected/application/plugins/AldirBlancDataprev/config-csv-inciso1.php
-      - ./compose/config-csv-inciso2.php:/var/www/html/protected/application/plugins/AldirBlancDataprev/config-csv-inciso2.php
-      - ./compose/config-cnab240-inciso1.php:/var/www/html/protected/application/plugins/AldirBlanc/config-cnab240-inciso1.php
-      - ./compose/config-import-cnab240.php:/var/www/html/protected/application/plugins/AldirBlanc/config-import-cnab240.php
-      - ./compose/config-mci460.php:/var/www/html/protected/application/plugins/AldirBlanc/config-mci460.php
-      - ./em-breve:/var/www/html/em-breve
+      - ./docker-data/logs:/var/www/var/logs
 
     environment:
       - REDIS_CACHE=redis
@@ -108,5 +104,5 @@ services:
       - POSTGRES_DB=mapas
       - POSTGRES_DB_TEST=mapasculturais_test
     volumes:
-      - ./compose/local/dump.sql:/docker-entrypoint-initdb.d/dump.sql
+      - ./db:/docker-entrypoint-initdb.d
       - ./docker-data/db-data:/var/lib/postgresql/data

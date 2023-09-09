@@ -1,48 +1,44 @@
 version: '2'
 services:
-  watcher:
-    build:
-      context: ../
-      dockerfile: compose/local/watcher/Dockerfile
-    volumes:
-      - ../plugins/AldirBlanc:/app
-  
   mapas:
     build:
       context: ../
-      dockerfile: compose/local/Dockerfile
+      dockerfile: docker/Dockerfile
+    command: /var/www/dev/start.sh
     ports:
-      - "8080:80"
+      - "80:80"
     volumes:
+      - ./docker/php.ini:/usr/local/etc/php/php.ini
+      - ./docker/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
+
       - ../docker-data/assets:/var/www/html/assets
       - ../docker-data/public-files:/var/www/html/files
       - ../docker-data/private-files:/var/www/private-files
-      - ../docker-data/pcache-cron.log:/var/www/scripts/nohup.out
-      - ../compose/common/config.d:/var/www/html/protected/application/conf/conf-common.d
-      - ../compose/local/config.d:/var/www/html/protected/application/conf/config.d
+      - ../docker-data/logs:/var/www/var/logs
+      
+      - ../docker/common/config.d:/var/www/config/common.d
+      - ../docker/local/config.d:/var/www/config/config.d
 
       # themes and plugins
-      - ../themes/MapaCulturalCapixaba:/var/www/html/protected/application/themes/MapaCulturalCapixaba
-      - ../plugins/AldirBlanc:/var/www/html/protected/application/plugins/AldirBlanc
-      - ../plugins/MultipleLocalAuth:/var/www/html/protected/application/plugins/MultipleLocalAuth
-      - ../plugins/AldirBlancDataprev:/var/www/html/protected/application/plugins/AldirBlancDataprev
-      - ../plugins/AldirBlancValidadorFinanceiro:/var/www/html/protected/application/plugins/AldirBlancValidadorFinanceiro
-      - ../plugins/RegistrationPayments:/var/www/html/protected/application/plugins/RegistrationPayments
-      - ../plugins/AldirBlancValidador:/var/www/html/protected/application/plugins/AldirBlancValidador
-      - ../compose/config-cnab240-inciso1.php:/var/www/html/protected/application/plugins/AldirBlanc/config-cnab240-inciso1.php
-      - ../compose/config-import-cnab240.php:/var/www/html/protected/application/plugins/AldirBlanc/config-import-cnab240.php
+      - ../themes/MapaCulturalES:/var/www/src/themes/MapaCulturalES
+      - ../plugins/MultipleLocalAuth:/var/www/src/plugins/MultipleLocalAuth
       
 
     environment:
-      - PENDING_PCACHE_RECREATION_INTERVAL=10
+      - PENDING_PCACHE_RECREATION_INTERVAL=5
+      - JOBS_INTERVAL=5
       - APP_MODE=development
       - CACHE_ASSETS_URL=false
       - REDIS_CACHE=redis
-      - MAILER_SERVER=mailhog
-      - MAILER_PORT=1025
+      - MAILER_TRANSPORT=smtp://mailhog:1025
+      - MAILER_FROM=sysadmin@localhost
+      
+      # chaves de teste do google recaptcha
+      - GOOGLE_RECAPTCHA_SITEKEY=6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI
+      - GOOGLE_RECAPTCHA_SECRET=6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe
     depends_on:
+      - mailhog
       - db
-      - watcher
       - redis
   
     stdin_open: true

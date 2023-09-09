@@ -1,5 +1,5 @@
 <?php
-namespace MapaCulturalCapixaba;
+namespace MapaCulturalES;
 
 
 use MapasCulturais\App;

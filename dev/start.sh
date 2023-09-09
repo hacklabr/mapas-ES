@@ -47,6 +47,8 @@ fi
 
 NAME=mapas
 
+docker rm $NAME
+
 docker-compose run --name=$NAME --service-ports  mapas
 
 docker-compose down

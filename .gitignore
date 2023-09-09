@@ -6,3 +6,5 @@ docker-data/db-data
 docker-data/private-files
 docker-data/*
 dumps/*
+themes/MapaCulturalES/assets/
+mapasculturais.prod.env
