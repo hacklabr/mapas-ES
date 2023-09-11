@@ -63,28 +63,6 @@ services:
     environment:
       - REDIS_CACHE=redis
       - SESSIONS_SAVE_PATH=tcp://sessions:6379
-      
-      - POSTGRES_PASSWORD=mapas
-      - POSTGRES_USER=mapas
-      - POSTGRES_DB=mapas
-
-      - APP_LCODE=pt_BR
-
-      - ACTIVE_THEME=EspiritoSanto
-      
-      - APP_MODE=production
-      - PENDING_PCACHE_RECREATION_INTERVAL=1
-      - REGISTRATION_PREFIX=es-
-
-      - AUTH_EMAIL_IMAGE=
-
-      - AUTH_FACEBOOK_VISIBLE=false
-      - AUTH_TWITTER_VISIBLE=false
-      - AUTH_LINKEDIN_VISIBLE=false
-      
-      - AUTH_SUPPORT_SITE=
-      - AUTH_SUPPORT_EMAIL=suportemapacultural@secult.es.gov.br
-      - AUTH_SUPPORT_CHAT=
 
     depends_on:
       - db
