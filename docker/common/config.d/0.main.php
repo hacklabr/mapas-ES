@@ -8,6 +8,9 @@ return [
 
     'app.lcode' => 'pt_BR',
 
+    'maps.center' => [-19.6103423,-40.7865062], 
+    'maps.zoom.default' => 8,
+
     // colocar sigla do estado, ou código do ibge?
     'registration.prefix' => 'es-',
 ];
