@@ -7,7 +7,8 @@
    width="640"
    height="640"
    viewBox="0 0 639.99999 640"
-   sodipodi:docname="Mapa C Logo 2.pdf"
+   sodipodi:docname="favicon.svg"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -193,18 +194,21 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:export-bgcolor="#ffffff00" />
+     inkscape:export-bgcolor="#ffffff00"
+     inkscape:zoom="1.8234375"
+     inkscape:cx="319.72579"
+     inkscape:cy="320"
+     inkscape:window-width="3440"
+     inkscape:window-height="1371"
+     inkscape:window-x="0"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g1" />
   <g
      id="g1"
      inkscape:groupmode="layer"
      inkscape:label="1"
      transform="translate(-190.30709,-193.65838)">
-    <path
-       id="path1"
-       d="M 0,0 H 1821 V 1024 H 0 Z"
-       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       transform="matrix(0.35145525,0,0,0.625,190.30709,193.65838)"
-       clip-path="url(#clipPath2)" />
     <g
        id="g10"
        clip-path="url(#clipPath10)">
