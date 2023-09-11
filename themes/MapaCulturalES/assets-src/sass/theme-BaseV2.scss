@@ -14,15 +14,15 @@ $lightness-300: 25%;
 $lightness-700: 25%;
 
 // Brand colors
-$primary-500: #0077B2;
-$secondary-500: #CE3683;
+$primary-500: #f4716c;
+$secondary-500: #8b71f7;
 
 // Entities colors
-$opportunities-500: #CE3683;
-$events-500: #0077B2;
-$agents-500: #9756D8;
-$projects-500: #EF7B45;
-$spaces-500: #498200;
+$opportunities-500: #f5bb50;
+$events-500: #f4716c;
+$spaces-500: darken(#f4716c, 15%);
+$agents-500: darken(#82d5f5, 25%);
+$projects-500: #8b71f7;
 
 $seals-500: #1E1E1E;
 
@@ -33,7 +33,7 @@ $warning-500: #FF9F1C;
 $helper-500: #0074C1;
 
 // home
-$home-opportunities: #CE3683;
+$home-opportunities: #f5bb50;
 $home-feature: #E79CC2;
 $home-register: #0077B2;
 
