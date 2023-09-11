@@ -205,6 +205,7 @@ ALTER TYPE public.permission_action OWNER TO mapas;
 
 CREATE FUNCTION public.days_in_month(check_date date) RETURNS integer
     LANGUAGE plpgsql IMMUTABLE
+
     AS $$
 DECLARE
   first_of_month DATE := check_date - ((extract(day from check_date) - 1)||' days')::interval;
@@ -222,6 +223,7 @@ ALTER FUNCTION public.days_in_month(check_date date) OWNER TO mapas;
 
 CREATE FUNCTION public.generate_recurrences(duration interval, original_start_date date, original_end_date date, range_start date, range_end date, repeat_month integer, repeat_week integer, repeat_day integer) RETURNS SETOF date
     LANGUAGE plpgsql IMMUTABLE
+
     AS $$
 DECLARE
   start_date DATE := original_start_date;
@@ -353,6 +355,7 @@ CREATE FUNCTION public.pseudo_random_id_generator() RETURNS integer
                     END LOOP;
                     RETURN ((r1 << 16) + l1);
                 END;
+
             $$;
 
 
@@ -384,6 +387,7 @@ CREATE FUNCTION public.random_id_generator(table_name character varying, initial
               END LOOP;
               RETURN rand_int;
             END;
+
             $$;
 
 
@@ -463,6 +467,7 @@ BEGIN
   END LOOP;
   RETURN;
 END;
+
 $$;
 
 
@@ -592,6 +597,7 @@ CREATE FUNCTION public.recurring_event_occurrence_for(range_start timestamp with
               END LOOP;
               RETURN;
             END;
+
             $$;
 
 
@@ -4894,4 +4900,3 @@ ALTER TABLE ONLY public.project_meta
 --
 -- PostgreSQL database dump complete
 --
-
