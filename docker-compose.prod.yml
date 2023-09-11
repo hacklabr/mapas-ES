@@ -44,12 +44,13 @@ services:
 
 
   mapasculturais:
+    image: hacklab/mapas-es:2.0.0
+
     env_file:
       - mapasculturais.prod.env
-    build:
-      context: ./
-      dockerfile: docker/Dockerfile
+
     restart: unless-stopped
+    
     ports:
       - "9000:9000"
     volumes:
@@ -83,4 +84,10 @@ services:
       - POSTGRES_DB_TEST=mapasculturais_test
     volumes:
       - ./db:/docker-entrypoint-initdb.d
-      - ./docker-data/db-data:/var/lib/postgresql/data
+      - ~/docker-data/ES-2023-09-10--2117:/var/lib/postgresql/data
+
+
+  mailhog: 
+    image: mailhog/mailhog
+    ports:
+      - "8025:8025"
