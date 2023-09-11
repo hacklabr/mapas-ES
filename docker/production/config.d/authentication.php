@@ -11,8 +11,6 @@ return [
     'auth.config' => array(
         
         'urlSupportEmail' => 'mailto:suportemapacultural@secult.es.gov.br',
-        'urlImageToUseInEmails' => 'https://mapa.cultura.es.gov.br/assets/aldirblanc/img/aldir-blanc.png',
-
 
         'salt' => env('AUTH_SALT', null),
         'timeout' => '24 hours',
