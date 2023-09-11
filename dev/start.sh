@@ -45,11 +45,7 @@ if [ $DOWN = "1" ]; then
    docker-compose down
 fi
 
-NAME=mapas
-
-docker rm $NAME
-
-docker-compose run --name=$NAME --service-ports  mapas
+docker-compose run --service-ports  mapas
 
 docker-compose down
 cd $CDIR
