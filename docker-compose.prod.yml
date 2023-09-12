@@ -44,7 +44,9 @@ services:
 
 
   mapasculturais:
-    image: hacklab/mapas-es:2.0.0
+    build:
+      context: ./
+      dockerfile: docker/Dockerfile
 
     env_file:
       - mapasculturais.prod.env
