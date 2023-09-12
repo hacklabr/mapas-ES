@@ -1,6 +1,9 @@
 #!/bin/bash
 echo "atualizando ambiente em:" $(date)
 git pull
-docker-compose -f docker-compose.prod.yml pull mapasculturais
+git submodule update
+
+docker-compose -f docker-compose.prod.yml build --no-cache --pull mapasculturais
+
 ./stop.sh
 ./start.sh
