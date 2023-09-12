@@ -60,7 +60,7 @@ services:
 
       - ./docker-data/assets:/var/www/html/assets
       - ./docker-data/public-files:/var/www/html/files
-      - ./docker-data/private-files:/var/www/private-files
+      - ./docker-data/private-files:/var/www/var/private-files
       - ./docker-data/logs:/var/www/var/logs
 
     environment:
