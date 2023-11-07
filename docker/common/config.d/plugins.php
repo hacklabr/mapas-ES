@@ -2,7 +2,9 @@
 
 return [
     'plugins' => [
-        'MultipleLocalAuth' => [ 'namespace' => 'MultipleLocalAuth' ],
+        'MultipleLocalAuth',
+        'AdminLoginAsUser',
+
         'SettingsES' => ['namespace' => 'SettingsES'],
         'Zammad' => [
             'namespace' => 'Zammad',
