@@ -23,9 +23,38 @@ class Plugin extends \MapasCulturais\Plugin
                 $result = true;
             }
         });
+
+        $this->reopenEvaluations();
     }
 
     public function register()
     {
+    }
+
+    /**
+     * Função para reabrir as avaliações nos editais que tiveram impacto dos metadados duplicados
+     */
+    public function reopenEvaluations()
+    {
+        $app = App::i();
+
+        $registrations = [
+            '13048' => [1787793248, 2060560646, 1246987641, 164822607]
+
+        ];
+
+        $app->hook("can(RegistrationEvaluation.modify)", function($user, &$can) use ($registrations){
+            $regs = $registrations["$user->id"] ?? [];
+            if(in_array($this->registration->id, $regs)){
+                $can = true;
+            }
+        });
+
+        $app->hook("can(Registration.evaluate)", function($user, &$can) use ($registrations){
+            $regs = $registrations["$user->id"] ?? [];
+            if(in_array($this->id, $regs)){
+                $can = true;
+            }
+        });
     }
 }
