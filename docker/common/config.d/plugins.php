@@ -4,6 +4,7 @@ return [
     'plugins' => [
         'MultipleLocalAuth',
         'AdminLoginAsUser',
+        'Analytics',
 
         'SettingsES' => ['namespace' => 'SettingsES'],
         'Zammad' => [
