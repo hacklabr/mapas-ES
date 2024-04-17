@@ -87,7 +87,7 @@ class Controller extends \MapasCulturais\Controllers\EntityController
                 if($files = $conn->fetchAll("SELECT * FROM file f WHERE f.object_type = 'MapasCulturais\Entities\Registration' AND f.object_id = '{$_number}' ORDER BY f.create_timestamp ASC")) {
                     foreach ($files as $file) {
                         $results[$number]['files'][] = [
-                            'data' => (new DateTime($revision['create_timestamp']))->format("d/m/Y H:i:s"),
+                            'data' => (new DateTime($file['create_timestamp']))->format("d/m/Y H:i:s"),
                             'name' => $file['name'],
                         ];
                     }
