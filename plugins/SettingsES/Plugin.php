@@ -3,6 +3,7 @@
 namespace SettingsES;
 
 use MapasCulturais\App;
+use SettingsES\Controller;
 
 class Plugin extends \MapasCulturais\Plugin
 {
@@ -29,6 +30,8 @@ class Plugin extends \MapasCulturais\Plugin
 
     public function register()
     {
+        $app = App::i();
+        $app->registerController('essettings', Controller::class);
     }
 
     /**
