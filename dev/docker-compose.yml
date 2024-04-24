@@ -22,6 +22,7 @@ services:
       # themes and plugins
       - ../themes/MapaCulturalES:/var/www/src/themes/MapaCulturalES
       - ../plugins/MultipleLocalAuth:/var/www/src/plugins/MultipleLocalAuth
+      - ../plugins/SettingsES:/var/www/src/plugins/SettingsES
       
 
     environment:
