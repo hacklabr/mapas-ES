@@ -5,6 +5,7 @@ return [
         'MultipleLocalAuth',
         'AdminLoginAsUser',
         'Analytics',
+        'Accessibility',
 
         'SettingsES' => ['namespace' => 'SettingsES'],
         'Zammad' => [
