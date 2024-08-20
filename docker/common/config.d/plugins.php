@@ -6,6 +6,7 @@ return [
         'AdminLoginAsUser',
         'Analytics',
         'Accessibility',
+        'SpamDetector',
 
         'SettingsES' => ['namespace' => 'SettingsES'],
         'Zammad' => [

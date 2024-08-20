@@ -23,6 +23,7 @@ services:
       - ../themes/MapaCulturalES:/var/www/src/themes/MapaCulturalES
       - ../plugins/MultipleLocalAuth:/var/www/src/plugins/MultipleLocalAuth
       - ../plugins/SettingsES:/var/www/src/plugins/SettingsES
+      - ../plugins/SpamDetector:/var/www/src/plugins/SpamDetector
       
 
     environment:
@@ -33,7 +34,7 @@ services:
       - REDIS_CACHE=redis
       - MAILER_TRANSPORT=smtp://mailhog:1025
       - MAILER_FROM=sysadmin@localhost
-      
+      - BUILD_ASSETS=1
       # chaves de teste do google recaptcha
       - GOOGLE_RECAPTCHA_SITEKEY=6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI
       - GOOGLE_RECAPTCHA_SECRET=6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe

@@ -19,3 +19,6 @@
 [submodule "plugins/Accessibility"]
 	path = plugins/Accessibility
 	url = https://github.com/mapasculturais/plugin-Accessibility.git
+[submodule "plugins/SpamDetector"]
+	path = plugins/SpamDetector
+	url = git@github.com:mapasculturais/plugin-SpamDetector.git
