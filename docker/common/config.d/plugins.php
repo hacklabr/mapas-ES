@@ -7,6 +7,7 @@ return [
         'Analytics',
         'Accessibility',
         'SpamDetector',
+        'ValuersManagement',
 
         'SettingsES' => ['namespace' => 'SettingsES'],
         'Zammad' => [

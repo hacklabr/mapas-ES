@@ -22,3 +22,6 @@
 [submodule "plugins/SpamDetector"]
 	path = plugins/SpamDetector
 	url = https://github.com/mapasculturais/plugin-SpamDetector.git
+[submodule "plugins/ValuersManagement"]
+	path = plugins/ValuersManagement
+	url = https://github.com/mapasculturais/plugin-ValuersManagement.git
