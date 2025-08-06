@@ -27,4 +27,4 @@
 	url = https://github.com/mapasculturais/plugin-ValuersManagement.git
 [submodule "plugins/plugins/ClaimForm"]
 	path = plugins/plugins/ClaimForm
-	url = git@github.com:mapasculturais/plugin-ClaimForm.git
+	url = https://github.com/mapasculturais/plugin-ClaimForm.git
