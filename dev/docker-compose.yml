@@ -22,7 +22,11 @@ services:
       # themes and plugins
       - ../themes/MapaCulturalES:/var/www/src/themes/MapaCulturalES
       - ../plugins/MultipleLocalAuth:/var/www/src/plugins/MultipleLocalAuth
-      - ../plugins/SettingsES:/var/www/src/plugins/SettingsES
+      - ../plugins/SettingsFa:/var/www/src/plugins/SettingsFa
+      - ../plugins/Analytics:/var/www/src/plugins/Analytics
+      - ../plugins/MapasBlame:/var/www/src/plugins/MapasBlame
+      - ../plugins/SpamDetector:/var/www/src/plugins/SpamDetector
+      - ../plugins/ClaimForm:/var/www/src/plugins/ClaimForm
       
 
     environment:
