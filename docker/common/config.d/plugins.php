@@ -14,8 +14,12 @@ return [
             'namespace' => 'Zammad',
             'config' => [
                 'enabled' => true,
-                'url' => 'https://suporte.es.mapasculturais.com.br/assets/chat/chat.min.js',
-                'background' => '#F66968'
+                'url' => 'https://suporte.mapasculturais.com.br/assets/form/form.js',    
+                'background' => '#F66968',
+                'title' => 'Duvidas? Fale conosco',
+                'chatId' => 2,
+                'instacacao' => 'mapa.cultura.es.gov.br',
+                'estado' => 'Espiríto Santo'
             ]
             ],
         'MapasBlame' => [
