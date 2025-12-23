@@ -1,3 +1,4 @@
 #!/bin/bash
 
-docker-compose -f docker-compose.prod.yml restart
+./stop.sh
+./start.sh

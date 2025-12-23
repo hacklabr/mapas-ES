@@ -1,1 +1,7 @@
 docker-data
+docker-data/public-files
+docker-data/db-data
+docker-data/private-files
+docker-data/*
+dumps/*
+dumps
