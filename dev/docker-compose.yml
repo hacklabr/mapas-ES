@@ -28,6 +28,8 @@ services:
       - ../plugins/SpamDetector:/var/www/src/plugins/SpamDetector
       - ../plugins/ClaimForm:/var/www/src/plugins/ClaimForm
       - ../plugins/ValuersManagement:/var/www/src/plugins/ValuersManagement
+      - ../plugins/AdminLoginAsUser:/var/www/src/plugins/AdminLoginAsUser
+      - ../plugins/ConectaEnte:/var/www/src/plugins/ConectaEnte
       
 
     environment:
@@ -43,6 +45,9 @@ services:
       # chaves de teste do google recaptcha
       - GOOGLE_RECAPTCHA_SITEKEY=6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI
       - GOOGLE_RECAPTCHA_SECRET=6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe
+
+      # ConectaEnte: live fala com o CultBR (default do plugin é dev/simulado)
+      - CONECTAENTE_MODE=live
     depends_on:
       - mailhog
       - db

@@ -8,6 +8,7 @@ return [
         'Accessibility',
         'SpamDetector',
         'ValuersManagement',
+        'ConectaEnte',
 
         'SettingsES' => ['namespace' => 'SettingsES'],
         'Zammad' => [
